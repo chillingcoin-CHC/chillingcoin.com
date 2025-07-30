@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ChillingCoin ($CHC)</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap">
   <style>
     * {
       margin: 0;
@@ -14,7 +13,7 @@
 
     body, html {
       height: 100%;
-      font-family: 'Orbitron', sans-serif;
+      font-family: sans-serif;
       scroll-behavior: smooth;
       color: white;
     }
@@ -38,38 +37,18 @@
     }
 
     .animated-title {
-      font-size: 3rem;
-      animation: fadeInUp 1s ease-in-out;
+      font-size: 2.5rem;
       text-shadow: 2px 2px 5px #000;
     }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .welcome-message {
+    .welcome-text {
       position: absolute;
-      top: 20%;
+      top: 10%;
       left: 50%;
       transform: translateX(-50%);
-      font-size: 1.8rem;
-      color: #00ffe7;
-      text-shadow: 0 0 5px #00ffe7, 0 0 10px #00ffe7, 0 0 20px #00ffe7;
-      animation: bounce 2s infinite alternate;
-      z-index: 10;
-    }
-
-    @keyframes bounce {
-      0% { transform: translate(-50%, 0); }
-      100% { transform: translate(-50%, -10px); }
-    }
-
-    #typingText {
-      font-size: 2.2rem;
-      margin-top: 1rem;
+      font-size: 1.1rem;
       color: #ffffff;
-      text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+      text-shadow: 1px 1px 3px #000;
     }
 
     .buttons {
@@ -104,12 +83,6 @@
       margin: 5px 0;
       font-weight: bold;
       text-decoration: none;
-      animation: blink 1.5s infinite alternate;
-    }
-
-    @keyframes blink {
-      0% { opacity: 0.3; }
-      100% { opacity: 1; }
     }
 
     .roadmap ul {
@@ -119,18 +92,16 @@
 
     .roadmap li {
       margin: 8px 0;
-      animation: blink 2s infinite alternate;
     }
 
     .audit {
       margin-top: 5rem;
       padding-bottom: 2rem;
-      animation: fadeInUp 1s ease-in-out;
     }
 
     @media (max-width: 768px) {
       .animated-title {
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
 
       .buttons a {
@@ -138,9 +109,9 @@
         padding: 10px 15px;
       }
 
-      .welcome-message {
-        font-size: 1.2rem;
-        top: 15%;
+      .welcome-text {
+        font-size: 0.9rem;
+        top: 8%;
       }
     }
   </style>
@@ -149,7 +120,7 @@
 
   <!-- SECTION 1: Hero -->
   <div class="section" style="background-image: url('chc-banner.jpeg.jpg');">
-    <div class="welcome-message" id="typingText"></div>
+    <div class="welcome-text">Welcome to $CHC</div>
     <img src="logo.jpeg.png" alt="ChillingCoin Logo" class="logo"/>
     <h1 class="animated-title">$CHC - ChillingCoin</h1>
   </div>
@@ -205,37 +176,6 @@
       <p style="max-width: 600px; margin: 0 auto;">ChillingCoin has passed contract verification. Further audits are planned with top blockchain security firms for enhanced trust and transparency.</p>
     </div>
   </div>
-
-  <!-- Typing Script -->
-  <script>
-    const text = "Welcome to $CHC";
-    const typingElement = document.getElementById("typingText");
-
-    let index = 0;
-    let isDeleting = false;
-
-    function typeEffect() {
-      if (!isDeleting) {
-        typingElement.textContent = text.substring(0, index++);
-        if (index > text.length) {
-          isDeleting = true;
-          setTimeout(typeEffect, 1000);
-        } else {
-          setTimeout(typeEffect, 120);
-        }
-      } else {
-        typingElement.textContent = text.substring(0, index--);
-        if (index < 0) {
-          isDeleting = false;
-          setTimeout(typeEffect, 600);
-        } else {
-          setTimeout(typeEffect, 70);
-        }
-      }
-    }
-
-    typeEffect();
-  </script>
 
 </body>
 </html>
