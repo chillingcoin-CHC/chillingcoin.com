@@ -2,13 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ChillingCoin ($CHC)</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -19,47 +15,53 @@
       background-attachment: fixed;
       color: #fff;
       text-align: center;
-      padding: 2rem 1rem;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     .logo {
-      width: 120px;
-      margin: 1rem auto;
+      width: 100px;
+      height: auto;
+      margin-bottom: 1rem;
     }
 
-    .chc-title {
+    .chc-name {
       font-size: 3rem;
       font-weight: bold;
       color: #00ffd8;
-      animation: floatText 3s infinite ease-in-out;
-      margin-top: 1rem;
+      animation: pulse 2s infinite;
     }
 
-    @keyframes floatText {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0px); }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.05); opacity: 0.85; }
+      100% { transform: scale(1); opacity: 1; }
     }
 
-    .button-group {
+    .btn-container {
       margin: 2rem 0;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      gap: 1rem;
     }
 
     .btn {
       background: #00ffd8;
       color: #000;
-      border: none;
-      padding: 1rem 1.5rem;
-      margin: 0.5rem;
-      font-size: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
+      padding: 1rem 2rem;
       text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
       transition: 0.3s;
-      min-width: 200px;
     }
 
     .btn:hover {
@@ -67,39 +69,31 @@
     }
 
     .section-title {
-      font-size: 1.6rem;
-      margin-top: 3rem;
-      color: #ffffff;
-      font-weight: bold;
+      font-size: 1.5rem;
+      margin: 2rem 0 1rem;
+      color: #ffef95;
     }
 
-    .info-box {
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 12px;
-      padding: 2rem;
-      margin: 1rem auto;
-      max-width: 850px;
-      color: #eee;
-    }
-
-    .info-box a {
+    .listing-links a {
+      display: block;
+      margin: 0.3rem 0;
       color: #00ffd8;
       text-decoration: none;
     }
 
-    .info-box ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .info-box ul li {
-      margin: 0.3rem 0;
+    .contract {
+      font-family: monospace;
+      margin-top: 1rem;
+      background: #111;
+      padding: 1rem;
+      border-radius: 8px;
+      color: #ffef95;
     }
 
     iframe {
       margin-top: 2rem;
-      max-width: 90%;
       border-radius: 12px;
+      max-width: 90%;
     }
 
     footer {
@@ -110,54 +104,42 @@
   </style>
 </head>
 <body>
+  <div class="overlay">
+    <img src="logo.jpeg.png" alt="CHC Logo" class="logo" />
+    <div class="chc-name">ChillingCoin ($CHC)</div>
 
-  <!-- Logo -->
-  <img src="chc-logo.png" alt="CHC Logo" class="logo" />
+    <div class="btn-container">
+      <a href="https://pancakeswap.finance/swap?outputCurrency=0xc50e66bca472da61d0184121e491609b774e2c37" class="btn">Buy on PancakeSwap</a>
+      <a href="https://chillingcoin.gitbook.io/tokenomics/" class="btn">View Whitepaper</a>
+      <a href="https://chillingcoin-chc.github.io/CHC-NFT-Mint/" class="btn">Mint CHC NFT</a>
+      <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0xc50e66bca472da61d0184121e491609b774e2c37" class="btn">Dextools</a>
+      <a href="https://www.geckoterminal.com/bsc/pools/0xc50e66bca472da61d0184121e491609b774e2c37" class="btn">GeckoTerminal</a>
+      <a href="https://coinpaprika.com/coin/chc-chillingcoin/" class="btn">CoinPaprika</a>
+    </div>
 
-  <!-- Animated CHC Title -->
-  <div class="chc-title">CHILLINGCOIN ($CHC)</div>
+    <div class="section-title">Listings</div>
+    <div class="listing-links">
+      <a href="https://top100token.com/address/0xc50e66bca472da61d0184121e491609b774e2c37">Top100Token</a>
+      <a href="https://coinboom.net/coin/chilling-coin">CoinBoom</a>
+      <a href="https://coindizzy.com/binance/0xc50e66bca472da61d0184121e491609b774e2c37">CoinDizzy</a>
+      <a href="https://coincatapult.com/coin/chilling-coin-chc">CoinCatapult</a>
+      <a href="https://www.coinscope.co/coin/4-chc">Coinscope</a>
+      <span style="color:#aaa;">CoinGecko – coming soon</span>
+      <span style="color:#aaa;">CoinMarketCap – coming soon</span>
+    </div>
 
-  <!-- Action Buttons -->
-  <div class="button-group">
-    <a href="https://pancakeswap.finance/swap?outputCurrency=0xc50e66bca472da61d0184121e491609b774e2c37" class="btn" target="_blank">Buy on PancakeSwap</a>
-    <a href="https://chillingcoin.gitbook.io/whitepaper" class="btn" target="_blank">View Whitepaper</a>
-    <a href="https://mint.chillingcoin.com" class="btn" target="_blank">Mint NFT</a>
-    <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0xc50e66bca472da61d0184121e491609b774e2c37" class="btn" target="_blank">Dextools</a>
-    <a href="https://www.geckoterminal.com/bsc/pools/0xc50e66bca472da61d0184121e491609b774e2c37" class="btn" target="_blank">GeckoTerminal</a>
-    <a href="https://coinpaprika.com/coin/chc-chillingcoin/" class="btn" target="_blank">Coinpaprika</a>
+    <div class="section-title">Smart Contract</div>
+    <div class="contract">
+      0xc50e66bca472da61d0184121e491609b774e2c37
+    </div>
+
+    <!-- Replace YOUR_VIDEO_ID with your actual YouTube ID -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+      title="CHC Trailer" frameborder="0" allowfullscreen></iframe>
+
+    <footer>
+      &copy; 2025 ChillingCoin ($CHC). All rights reserved.
+    </footer>
   </div>
-
-  <!-- CHC Listings & Audit Info -->
-  <div class="section-title">CHC Token Info & Listings</div>
-  <div class="info-box">
-    <p><strong>Token Address:</strong><br>
-    <span style="font-family: monospace; color: #ffef95;">0xc50e66bca472da61d0184121e491609b774e2c37</span></p>
-
-    <p><strong>Audit:</strong> <a href="https://github.com/ChillingCoin/audits" target="_blank">View Audit</a></p>
-
-    <p><strong>Listings:</strong></p>
-    <ul>
-      <li>🌙 <a href="https://moonscan.io/token/0xc50e66bca472da61d0184121e491609b774e2c37" target="_blank">MoonScan</a></li>
-      <li>🛰️ <a href="https://astrotools.io/app/pairs/0xc50e66bca472da61d0184121e491609b774e2c37" target="_blank">AstroTools</a></li>
-      <li>🦎 CoinGecko (Coming Soon)</li>
-      <li>📈 CoinMarketCap (Coming Soon)</li>
-    </ul>
-
-    <p><strong>Tokenomics:</strong> <a href="https://chillingcoin.gitbook.io/tokenomics" target="_blank">View CHC Tokenomics</a></p>
-
-    <p><strong>Project Summary:</strong></p>
-    <p>
-      ChillingCoin ($CHC) is a lifestyle crypto project merging Web3 culture with real-world chill. Whether you're trading, minting NFTs, or vibing with the community — CHC brings the chill to the chain. Explore, earn, and relax with ChillingCoin.
-    </p>
-  </div>
-
-  <!-- YouTube Trailer -->
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 ChillingCoin ($CHC). All rights reserved.
-  </footer>
-
 </body>
 </html>
