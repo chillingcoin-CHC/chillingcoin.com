@@ -16,13 +16,22 @@
       background-color: #000;
       color: #fff;
       scroll-behavior: smooth;
+      position: relative;
     }
 
-    .particles-container {
-      position: absolute;
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Particles container */
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       z-index: 0;
+      pointer-events: none;
     }
 
     .section {
@@ -48,7 +57,7 @@
       left: 0;
       height: 100%;
       width: 100%;
-      background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+      background: rgba(0, 0, 0, 0.6);
       z-index: -1;
     }
 
@@ -175,8 +184,8 @@
 </head>
 <body>
 
-<!-- Particles.js background -->
-<div id="particles-js" class="particles-container"></div>
+<!-- Particles Background -->
+<div id="particles-js"></div>
 
 <!-- SECTION 1: Hero -->
 <div class="section" style="background-image: url('chc-banner.jpeg.jpg');">
@@ -260,5 +269,6 @@
     }
   });
 </script>
+
 </body>
 </html>
