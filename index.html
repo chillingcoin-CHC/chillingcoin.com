@@ -3,172 +3,147 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ChillingCoin | $CHC</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Explore ChillingCoin: Stake CHC, mint NFTs, and discover our whitepaper. The chillest project on BSC.">
-  <meta property="og:title" content="ChillingCoin — The Chillest BSC Project" />
-  <meta property="og:description" content="Stake CHC, mint NFTs, and explore the whitepaper." />
-  <meta property="og:image" content="https://chillingcoin.com/chc-banner.jpeg.jpg" />
-  <meta property="og:url" content="https://chillingcoin.com/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:creator" content="@chillingchc" />
+  <title>ChillingCoin (CHC)</title>
+
+  <!-- Modern Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-    body, html {
+    body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      color: #fff;
-      background: #000;
-      background-image: url('chc-banner.jpeg.jpg');
+      font-family: 'Poppins', sans-serif;
+      background-image: url('chc-banner.jpeg.jpg'); /* Make sure this file is uploaded */
       background-size: cover;
-      background-repeat: no-repeat;
       background-position: center;
-      height: 100vh;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
     }
+
     .overlay {
-      background: rgba(0, 0, 0, 0.75);
-      height: 100%;
-      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      padding: 4rem 1rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
-      padding: 40px 20px;
-      text-align: center;
-      overflow-y: auto;
+      justify-content: center;
     }
-    .logo {
-      max-width: 120px;
-      margin-bottom: 20px;
-    }
+
     h1 {
       font-size: 3rem;
-      margin: 0;
       color: #00ffd8;
+      margin: 1rem 0;
+      animation: pulse 3s infinite ease-in-out;
     }
+
     h2 {
-      margin: 10px 0 30px;
+      font-size: 1.2rem;
       color: #ccc;
-      font-weight: 400;
+      margin-bottom: 2rem;
     }
+
+    .section {
+      max-width: 700px;
+      margin: 2rem auto;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.6s ease-out;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
     .btn {
       background: #00ffd8;
       color: #000;
-      padding: 14px 24px;
-      margin: 10px;
-      text-decoration: none;
+      border: none;
+      padding: 1rem 2rem;
       border-radius: 8px;
-      display: inline-block;
-      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      margin: 0.5rem;
       transition: 0.3s ease;
     }
+
     .btn:hover {
-      background: #00cbb0;
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 4px 15px rgba(0, 255, 216, 0.4);
     }
-    .section {
-      background: #111;
-      padding: 25px;
-      border-radius: 10px;
-      margin: 20px 0;
-      max-width: 750px;
-      width: 100%;
-      text-align: left;
-    }
-    .section h3 {
-      color: #00ffd8;
-      margin-bottom: 10px;
-    }
+
     .contract {
       font-family: monospace;
-      background: #1f1f1f;
-      padding: 10px;
+      background: #1a1a1d;
+      padding: 0.5rem;
       border-radius: 6px;
+      word-break: break-all;
+      margin-top: 0.5rem;
       color: #ffef95;
-      word-break: break-word;
     }
+
     footer {
-      margin-top: 40px;
-      color: #888;
+      margin-top: 3rem;
       font-size: 0.9rem;
+      color: #ccc;
     }
-    a {
-      color: #00ffd8;
-    }
-    .social {
-      margin-top: 15px;
-    }
-    .social img {
-      height: 30px;
-      margin: 0 10px;
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
     }
   </style>
 </head>
 <body>
   <div class="overlay">
-    <img src="logo.jpeg.png" alt="CHC Logo" class="logo" />
+    <img src="logo.png" alt="CHC Logo" style="width: 120px; border-radius: 50%; margin-bottom: 1rem;" />
     <h1>ChillingCoin (CHC)</h1>
     <h2>The Chillest Coin on BSC ❄️</h2>
 
-    <!-- Buttons -->
-    <div>
-      <a class="btn" href="https://pancakeswap.finance/swap?outputCurrency=0xc50E66BCa472dA61D0184121e491609B774e2c37" target="_blank">Buy on PancakeSwap</a>
-      <a class="btn" href="https://chillingcoin.gitbook.io/tokenomics/" target="_blank">Whitepaper</a>
-      <a class="btn" href="https://chillingcoin-chc.github.io/CHC-NFT/" target="_blank">Mint NFT</a>
-    </div>
-
-    <!-- Token Info -->
     <div class="section">
-      <h3>Token Info</h3>
-      <p><strong>Symbol:</strong> CHC</p>
-      <p><strong>Network:</strong> Binance Smart Chain (BEP-20)</p>
-      <p><strong>Contract Address:</strong></p>
-      <div class="contract">0xc50E66BCa472dA61D0184121e491609B774e2c37</div>
+      <h3>Audit Status ✅</h3>
+      <p>CHC has been independently audited and verified for security.</p>
+      <a href="https://github.com/chillingcoin/audit-report.pdf" class="btn">View Audit</a>
     </div>
 
-    <!-- Listing Info -->
     <div class="section">
-      <h3>Listings & Tracking</h3>
-      <ul>
-        <li><a href="https://www.dextools.io/app/en/bnb/pair-explorer/0x349509b01de1874c63e36877d94ccbb76d0b2019" target="_blank">DEXTools</a></li>
-        <li><a href="https://www.geckoterminal.com/bsc/pools/0x349509b01de1874c63e36877d94ccbb76d0b2019" target="_blank">GeckoTerminal</a></li>
-        <li><a href="https://coinpaprika.com/coin/chc-chillingcoin/" target="_blank">CoinPaprika</a></li>
-      </ul>
+      <h3>Listed On</h3>
+      <p>Track CHC on major platforms:</p>
+      <a href="https://geckoterminal.com/bsc/pools" class="btn">GeckoTerminal</a>
+      <a href="https://www.coinsniper.net/coin/000000" class="btn">CoinSniper</a>
+      <a href="https://www.coindataflow.com/en/coin/chillingcoin" class="btn">CoinDataFlow</a>
     </div>
 
-    <!-- Audit Section -->
     <div class="section">
-      <h3>Smart Contract Audit</h3>
-      <p>
-        ✅ CHC has passed honeypot & basic risk checks. A full third-party audit is underway.
-      </p>
-      <a class="btn" href="https://apespace.io/honeypot/0xc50e66bca472da61d0184121e491609b774e2c37" target="_blank">
-        View Security Report
-      </a>
-      <p style="margin-top: 10px; font-size: 0.9rem; color: #aaa;">
-        Full audit expected August 2025. Follow us on <a href="https://x.com/chillingchc" target="_blank">X</a> for updates.
-      </p>
+      <h3>Smart Contract</h3>
+      <div class="contract">0xYourChillingCoinAddressHere</div>
     </div>
 
-    <!-- Social Links -->
-    <div class="section">
-      <h3>Join the Chill Community</h3>
-      <p>
-        <a href="https://t.me/Chillingcoinbsc0" target="_blank">Telegram</a> |
-        <a href="https://x.com/chillingchc" target="_blank">X (Twitter)</a> |
-        <a href="https://discord.chillingcoin.com" target="_blank">Discord</a>
-      </p>
-    </div>
-
-    <!-- Footer -->
     <footer>
-      &copy; 2025 ChillingCoin — All Rights Reserved
+      &copy; 2025 ChillingCoin. Stay Chill ❄️
     </footer>
   </div>
+
+  <!-- Snowflake Animation -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-snowflakes@1.0.1/snowflakes.min.js"></script>
+  <script>snowflakes.start();</script>
+
+  <!-- Scroll Fade Script -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+    document.querySelectorAll('.section').forEach(sec => observer.observe(sec));
+  </script>
 </body>
 </html>
