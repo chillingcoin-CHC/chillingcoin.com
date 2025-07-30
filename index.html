@@ -5,190 +5,205 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ChillingCoin ($CHC)</title>
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Segoe UI', sans-serif;
-      background-image: url('chc-banner.jpeg.jpg');
-background-size: contain;
-background-position: center top;
-background-repeat: no-repeat;
-background-attachment: fixed;
       color: #fff;
       text-align: center;
-      padding: 0;
+      background: url('chc-banner.jpeg.jpg') no-repeat center center fixed;
+      background-size: cover;
     }
 
     header {
-      padding-top: 2rem;
+      padding: 4rem 1rem 2rem;
     }
 
     .logo {
       width: 120px;
+      height: auto;
       margin-bottom: 1rem;
     }
 
-    .animated-title {
+    .animated-chc {
       font-size: 3rem;
       color: #00ffd8;
+      animation: pulse 2s infinite;
       font-weight: bold;
-      animation: floatText 4s ease-in-out infinite;
     }
 
-    @keyframes floatText {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(1.05); }
     }
 
-    .section {
-      margin: 3rem auto;
-      padding: 2rem 1rem;
-      max-width: 900px;
-      background-color: rgba(0, 0, 0, 0.4);
-      border-radius: 16px;
-    }
-
-    h2 {
-      color: #00ffd8;
-      margin-bottom: 1rem;
-    }
-
-    .buttons a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 1rem 2rem;
-      background-color: #00ffd8;
-      color: #000;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .buttons a:hover {
-      background-color: #00cbb0;
-    }
-
-    .listings, .community {
+    .buttons {
+      margin: 2rem 0;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
     }
 
-    .listings a, .community a {
-      color: #fff;
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 0.8rem 1.2rem;
-      border-radius: 8px;
+    .btn {
+      background: #00ffd8;
+      color: #000;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
       text-decoration: none;
-      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #00cbb0;
+    }
+
+    .full-section {
+      background: url('chc-banner2.jpeg.jpg') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      width: 100%;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .section h2 {
+      color: #00ffd8;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 0.5rem 0;
+    }
+
+    a {
+      color: #00ffd8;
+      text-decoration: none;
+    }
+
+    /* Roadmap */
+    .roadmap {
+      padding: 4rem 2rem;
+    }
+
+    .roadmap h2 {
+      color: #00ffd8;
+      margin-bottom: 1.5rem;
     }
 
     .roadmap ul {
-      list-style: none;
-      padding: 0;
-      margin: 1rem 0;
+      color: #fff;
+      font-size: 1rem;
     }
 
-    .roadmap li {
-      margin: 0.5rem 0;
+    /* Scrolling audit section */
+    .audit {
+      background-color: #000;
+      color: #00ffd8;
+      overflow: hidden;
+      padding: 2rem 1rem;
+    }
+
+    .audit-text {
+      white-space: nowrap;
+      display: inline-block;
+      animation: scrollLeft 15s linear infinite;
+      font-weight: bold;
       font-size: 1.1rem;
     }
 
-    .audit-button {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      color: #fff;
-      background: linear-gradient(270deg, #00ffd8, #00cbb0);
-      background-size: 400% 400%;
-      animation: gradientMove 6s ease infinite;
-      border-radius: 10px;
-      text-decoration: none;
-    }
-
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    @keyframes scrollLeft {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
     }
 
     footer {
-      margin: 3rem 0 1rem;
+      padding: 2rem;
+      background: #111;
       font-size: 0.9rem;
       color: #ccc;
+    }
+
+    @media screen and (max-width: 600px) {
+      .animated-chc { font-size: 2rem; }
+      .btn { padding: 0.8rem 1.2rem; font-size: 0.9rem; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo.jpeg.png" alt="ChillingCoin Logo" class="logo"/>
-    <h1 class="animated-title">$CHC - ChillingCoin</h1>
+    <img src="logo.jpeg.png" alt="CHC Logo" class="logo" />
+    <div class="animated-chc">ChillingCoin ($CHC)</div>
+
+    <div class="buttons">
+      <a href="https://pancakeswap.finance/swap?outputCurrency=0xc50e66bca472da61d0184121e491609b774e2c37" class="btn">Buy on PancakeSwap</a>
+      <a href="https://chillingcoin.gitbook.io/tokenomics/" class="btn">View Whitepaper</a>
+      <a href="https://chillingcoin-chc.github.io/CHC-NFT-Mint/" class="btn">Mint NFT</a>
+      <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0xc50e66bca472da61d0184121e491609b774e2c37" class="btn">Dextools</a>
+      <a href="https://www.geckoterminal.com/" class="btn">GeckoTerminal</a>
+      <a href="https://coinpaprika.com/" class="btn">CoinPaprika</a>
+    </div>
   </header>
 
-  <!-- Buy and Info Buttons -->
-  <div class="section">
-    <h2>Get Started</h2>
-    <div class="buttons">
-      <a href="https://pancakeswap.finance/swap?outputCurrency=0xc50e66bca472da61d0184121e491609b774e2c37">Buy on PancakeSwap</a>
-      <a href="https://chillingcoin.gitbook.io/tokenomics/">View Whitepaper</a>
-      <a href="https://chillingcoin-chc.github.io/CHC-NFT-Mint/">Mint NFT</a>
-      <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0xc50e66bca472da61d0184121e491609b774e2c37">Dextools</a>
-      <a href="https://www.geckoterminal.com/bsc/pools/0xc50e66bca472da61d0184121e491609b774e2c37">GeckoTerminal</a>
-      <a href="https://top100token.com/address/0xc50e66bca472da61d0184121e491609b774e2c37">CoinPaprika</a>
-    </div>
-  </div>
+  <div class="full-section"></div>
 
-  <!-- Listings -->
-  <div class="section">
+  <section class="section">
     <h2>Listings</h2>
-    <div class="listings">
-      <a href="https://top100token.com/address/0xc50e66bca472da61d0184121e491609b774e2c37">Top100Token</a>
-      <a href="https://coinboom.net/coin/chilling-coin">CoinBoom</a>
-      <a href="https://coindizzy.com/binance/0xc50e66bca472da61d0184121e491609b774e2c37">CoinDizzy</a>
-      <a href="https://coincatapult.com/coin/chilling-coin-chc">CoinCatapult</a>
-      <a href="https://www.coinscope.co/coin/4-chc">CoinScope</a>
-      <span style="color: #aaa;">CoinGecko & CoinMarketCap - Coming Soon</span>
-    </div>
-  </div>
+    <ul>
+      <li><a href="https://top100token.com/address/0xc50e66bca472da61d0184121e491609b774e2c37">Top100Token</a></li>
+      <li><a href="https://coinboom.net/coin/chilling-coin">CoinBoom</a></li>
+      <li><a href="https://coindizzy.com/binance/0xc50e66bca472da61d0184121e491609b774e2c37">CoinDizzy</a></li>
+      <li><a href="https://coincatapult.com/coin/chilling-coin-chc">CoinCatapult</a></li>
+      <li><a href="https://www.coinscope.co/coin/4-chc">CoinScope</a></li>
+      <li>CoinGecko (coming soon)</li>
+      <li>CoinMarketCap (coming soon)</li>
+    </ul>
+  </section>
 
-  <!-- Community -->
-  <div class="section">
+  <section class="section">
     <h2>Join Our Community</h2>
-    <div class="community">
-      <a href="https://t.me/Chillingcoinbsc0">Telegram</a>
-      <a href="https://x.com/chillingchc">Twitter / X</a>
-      <a href="https://discord.gg/yF9C36dV">Discord</a>
-    </div>
-  </div>
+    <ul>
+      <li><a href="https://t.me/Chillingcoinbsc0">Telegram</a></li>
+      <li><a href="https://x.com/chillingchc">X (Twitter)</a></li>
+      <li><a href="https://discord.gg/yF9C36dV">Discord</a></li>
+    </ul>
+  </section>
 
-  <!-- Roadmap -->
-  <div class="section roadmap">
+  <section class="roadmap">
     <h2>Roadmap</h2>
     <ul>
-      <li>✅ Token Launched</li>
-      <li>✅ Smart Contract Verified</li>
-      <li>✅ NFTs Mint Live</li>
-      <li>🚀 Listed on Top100Token, CoinDizzy, CoinBoom, CoinCatapult, CoinScope</li>
-      <li>⏳ CoinGecko & CoinMarketCap Pending</li>
-      <li>🎯 Marketing Campaign & Partnerships</li>
-      <li>📈 Community Growth & DAO Formation</li>
+      <li>✅ Launch CHC Token</li>
+      <li>✅ NFT Mint Page Live</li>
+      <li>✅ Listed on Top Tokens Sites</li>
+      <li>🔜 CoinGecko & CMC Listing</li>
+      <li>🔜 CHC Staking & Partnerships</li>
+      <li>🔜 CEX Listings</li>
     </ul>
-  </div>
+  </section>
 
-  <!-- Audit -->
-  <div class="section">
-    <h2>Smart Contract Audit</h2>
-    <a class="audit-button" href="https://honeypot.is/?address=0xc50e66bca472da61d0184121e491609b774e2c37" target="_blank">
-      View Honeypot Audit Report
-    </a>
-  </div>
+  <section class="audit">
+    <div class="audit-text">
+      🔍 CHC Smart Contract Audited: <a href="https://honeypot.is/?address=0xc50e66bca472da61d0184121e491609b774e2c37" target="_blank" style="color:#00ffd8;">View Honeypot Audit</a> 🔐
+    </div>
+  </section>
 
   <footer>
     &copy; 2025 ChillingCoin ($CHC). All rights reserved.
   </footer>
-
 </body>
 </html>
