@@ -5,19 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ChillingCoin ($CHC)</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-image: url('chc-banner.jpeg.jpg');
-  background-size: contain;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-color: #000; /* fallback color */
-  color: #fff;
-  text-align: center;
-  padding: 0;
-}
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('chc-banner.jpeg.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+    }
 
     header {
       padding-top: 2rem;
@@ -102,17 +106,26 @@
       padding: 1rem 2rem;
       font-size: 1rem;
       color: #fff;
-      background: linear-gradient(270deg, #00ffd8, #00cbb0);
+      background: linear-gradient(270deg, #00ffd8, #00cbb0, #00ffd8);
       background-size: 400% 400%;
       animation: gradientMove 6s ease infinite;
       border-radius: 10px;
       text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 12px #00ffd8;
     }
 
     @keyframes gradientMove {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
+    }
+
+    .full-image-section {
+      background: url('chc-banner2.jpeg.jpg') no-repeat center center;
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
     }
 
     footer {
@@ -141,6 +154,9 @@
       <a href="https://coinpaprika.com/coin/chc-chillingcoin/">CoinPaprika</a>
     </div>
   </div>
+
+  <!-- Second Background Section (chc-banner2) -->
+  <div class="full-image-section"></div>
 
   <!-- Listings -->
   <div class="section">
