@@ -30,6 +30,21 @@
       align-items: center;
       padding: 3rem 1rem;
       text-align: center;
+      position: relative;
+    }
+
+    .welcome-blink {
+      position: absolute;
+      top: 12%; /* Adjust this to move it closer or higher */
+      font-size: 1rem;
+      color: #00ffd8;
+      animation: fadeBlink 2.5s infinite;
+      font-weight: 500;
+    }
+
+    @keyframes fadeBlink {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
     }
 
     .animated-title {
@@ -131,24 +146,6 @@
       100% { background-position: 0% 50%; }
     }
 
-    .welcome-message {
-      font-size: 1rem;
-      color: #00ffd8;
-      font-style: italic;
-      animation: welcomeBlink 3s infinite;
-      position: absolute;
-      top: 44%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 5;
-      pointer-events: none;
-    }
-
-    @keyframes welcomeBlink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
-
     footer {
       margin: 3rem 0 1rem;
       font-size: 0.9rem;
@@ -160,8 +157,8 @@
 <body>
 
   <!-- SECTION 1: Hero -->
-  <div class="section" style="background-image: url('chc-banner.jpeg.jpg'); position: relative;">
-    <div class="welcome-message">Welcome to $CHC</div>
+  <div class="section" style="background-image: url('chc-banner.jpeg.jpg');">
+    <div class="welcome-blink">Welcome to $CHC</div>
     <h1 class="animated-title">$CHC - ChillingCoin</h1>
   </div>
 
