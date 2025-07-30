@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ChillingCoin ($CHC)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -12,106 +13,123 @@
     }
 
     body, html {
-      height: 100%;
-      font-family: sans-serif;
+      font-family: 'Great Vibes', cursive;
       scroll-behavior: smooth;
-      color: white;
+      overflow-x: hidden;
     }
 
     .section {
       height: 100vh;
-      width: 100%;
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
+      color: white;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      position: relative;
       text-align: center;
+      position: relative;
     }
 
     .logo {
-      width: 120px;
-      margin-bottom: 20px;
+      width: 150px;
+      margin-bottom: 1rem;
     }
 
     .animated-title {
-      font-size: 2.5rem;
-      text-shadow: 2px 2px 5px #000;
+      font-size: 3rem;
+      animation: glow 2s ease-in-out infinite alternate;
     }
 
-    .welcome-text {
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #0ff, 0 0 20px #0ff; }
+      to { text-shadow: 0 0 20px #0ff, 0 0 30px #0ff; }
+    }
+
+    .typing-text {
       position: absolute;
-      top: 10%;
+      top: 47%;
       left: 50%;
       transform: translateX(-50%);
-      font-size: 1.1rem;
-      color: #ffffff;
-      text-shadow: 1px 1px 3px #000;
+      font-size: 1.8rem;
+      color: #00ffd8;
+      text-shadow: 0 0 10px rgba(0, 255, 200, 0.8);
+      white-space: nowrap;
+      border-right: 2px solid #00ffd8;
+      overflow: hidden;
+      z-index: 10;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     .buttons {
       margin-top: 2rem;
       display: flex;
       flex-wrap: wrap;
+      gap: 10px;
       justify-content: center;
-      gap: 15px;
     }
 
     .buttons a {
       text-decoration: none;
-      padding: 12px 20px;
-      background: #00ffe7;
+      padding: 12px 24px;
+      background: #00ffd8;
       color: #000;
+      border-radius: 5px;
       font-weight: bold;
-      border-radius: 6px;
-      transition: background 0.3s;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .buttons a:hover {
-      background: #00cccc;
-    }
-
-    .listings, .community, .roadmap, .audit {
-      margin-top: 3rem;
+      transform: scale(1.05);
+      box-shadow: 0 0 12px #00ffd8;
     }
 
     .listings a, .community a {
       display: block;
-      color: #00ffe7;
-      margin: 5px 0;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .roadmap ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .roadmap li {
       margin: 8px 0;
+      text-decoration: none;
+      color: #00ffd8;
+      font-weight: bold;
+      animation: blink 1.5s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .roadmap {
+      margin-top: 3rem;
+    }
+
+    .roadmap h2,
+    .roadmap ul li {
+      animation: blink 2s infinite;
     }
 
     .audit {
       margin-top: 5rem;
-      padding-bottom: 2rem;
+      padding-bottom: 4rem;
+      animation: fadeIn 2s ease-in-out;
     }
 
     @media (max-width: 768px) {
       .animated-title {
         font-size: 2rem;
       }
-
       .buttons a {
+        padding: 10px 18px;
         font-size: 0.9rem;
-        padding: 10px 15px;
       }
-
-      .welcome-text {
-        font-size: 0.9rem;
-        top: 8%;
+      .typing-text {
+        font-size: 1.3rem;
+        top: 45%;
       }
     }
   </style>
@@ -120,14 +138,13 @@
 
   <!-- SECTION 1: Hero -->
   <div class="section" style="background-image: url('chc-banner.jpeg.jpg');">
-    <div class="welcome-text">Welcome to $CHC</div>
+    <div class="typing-text" id="typing"></div>
     <img src="logo.jpeg.png" alt="ChillingCoin Logo" class="logo"/>
     <h1 class="animated-title">$CHC - ChillingCoin</h1>
   </div>
 
   <!-- SECTION 2: Get Started -->
   <div class="section" style="background-image: url('chc-banner2.jpeg.jpg');">
-    <h2 style="text-shadow: 1px 1px 4px #000;">Get Started</h2>
     <div class="buttons">
       <a href="https://pancakeswap.finance/swap?outputCurrency=0xc50e66bca472da61d0184121e491609b774e2c37">Buy on PancakeSwap</a>
       <a href="https://chillingcoin.gitbook.io/tokenomics/">View Whitepaper</a>
@@ -139,7 +156,7 @@
     </div>
   </div>
 
-  <!-- SECTION 3: Listings & Community -->
+  <!-- SECTION 3: Listings, Community, Roadmap, Audit -->
   <div class="section" style="background-image: url('logo.jpeg.png');">
     <h2>Listings</h2>
     <div class="listings">
@@ -148,7 +165,7 @@
       <a href="https://coindizzy.com/binance/0xc50e66bca472da61d0184121e491609b774e2c37">CoinDizzy</a>
       <a href="https://coincatapult.com/coin/chilling-coin-chc">CoinCatapult</a>
       <a href="https://www.coinscope.co/coin/4-chc">CoinScope</a>
-      <span style="color: #ccc;">CoinGecko & CoinMarketCap - Coming Soon</span>
+      <span style="color: #aaa;">CoinGecko & CoinMarketCap - Coming Soon</span>
     </div>
 
     <h2 style="margin-top: 4rem;">Join Our Community</h2>
@@ -172,10 +189,32 @@
     </div>
 
     <div class="audit">
-      <h2>Audit & Security</h2>
-      <p style="max-width: 600px; margin: 0 auto;">ChillingCoin has passed contract verification. Further audits are planned with top blockchain security firms for enhanced trust and transparency.</p>
+      <h2>Audit</h2>
+      <p style="color: #00ffd8;">Smart contract audit coming soon...</p>
     </div>
   </div>
+
+  <script>
+    const text = "Welcome to $CHC";
+    let index = 0;
+    const typingElement = document.getElementById("typing");
+
+    function typeWriter() {
+      if (index < text.length) {
+        typingElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 150);
+      } else {
+        setTimeout(() => {
+          typingElement.textContent = "";
+          index = 0;
+          typeWriter();
+        }, 2000);
+      }
+    }
+
+    typeWriter();
+  </script>
 
 </body>
 </html>
