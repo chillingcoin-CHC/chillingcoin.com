@@ -4,10 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ChillingCoin ($CHC)</title>
-
-  <!-- Stylish Font for Welcome Message -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap">
   <style>
     * {
       margin: 0;
@@ -15,387 +12,136 @@
       box-sizing: border-box;
     }
 
-    html, body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #000;
-      color: #fff;
+    body, html {
+      height: 100%;
+      font-family: 'Orbitron', sans-serif;
       scroll-behavior: smooth;
+      color: white;
     }
 
     .section {
+      height: 100vh;
       width: 100%;
-      min-height: 100vh;
       background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
+      background-position: center;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      padding: 3rem 1rem;
-      text-align: center;
+      justify-content: center;
       position: relative;
-    }
-
-    .typing-text {
-      position: absolute;
-      top: 47%;
-      left: 50%;
-      transform: translateX(-50%);
-      font-family: 'Great Vibes', cursive;
-      font-size: 2rem;
-      color: #00ffd8;
-      text-shadow: 0 0 10px rgba(0, 255, 200, 0.8);
-      white-space: nowrap;
-      border-right: 2px solid #00ffd8;
-      overflow: hidden;
-      z-index: 10;
+      text-align: center;
     }
 
     .logo {
       width: 120px;
-      margin-bottom: 1rem;
+      margin-bottom: 20px;
     }
 
     .animated-title {
       font-size: 3rem;
-      color: #00ffd8;
-      font-weight: bold;
-      animation: floatText 4s ease-in-out infinite;
+      animation: fadeInUp 1s ease-in-out;
+      text-shadow: 2px 2px 5px #000;
     }
 
-    @keyframes floatText {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    h2 {
-      color: #00ffd8;
-      margin-bottom: 1rem;
-      font-size: 2rem;
-    }
-
-    .buttons a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 1rem 2rem;
-      background-color: #00ffd8;
-      color: #000;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .buttons a:hover {
-      background-color: #00cbb0;
-    }
-
-    .listings, .community {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .listings a, .community a {
-      color: #fff;
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 0.8rem 1.2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .roadmap ul {
-      list-style: none;
-      padding: 0;
-      margin-top: 1rem;
-    }
-
-    .roadmap li {
-      margin: 0.5rem 0;
-      font-size: 1.1rem;
-    }
-
-    .audit-button {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      color: #fff;
-      background: linear-gradient(270deg, #00ffd8, #00cbb0);
-      background-size: 400% 400%;
-      animation: gradientMove 6s ease infinite;
-      border-radius: 10px;
-      text-decoration: none;
-    }
-
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    .blinking-title {
-      animation: blink 1.5s infinite;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
-    }
-
-    footer {
-      margin: 3rem 0 1rem;
-      font-size: 0.9rem;
-      color: #ccc;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- SECTION 1: Hero -->
-  <div class="section" style="background-image: url('chc-banner.jpeg.jpg');">
-    <div class="typing-text" id="typingText"></div>
-    <h1 class="animated-title">$CHC - ChillingCoin</h1>
-  </div>
-
-  <!-- SECTION 2: Get Started -->
-  <div class="section" style="background-image: url('chc-banner2.jpeg.jpg');">
-    <h2>Get Started</h2>
-    <div class="buttons">
-      <a href="https://pancakeswap.finance/swap?outputCurrency=0xc50e66bca472da61d0184121e491609b774e2c37">Buy on PancakeSwap</a>
-      <a href="https://chillingcoin.gitbook.io/tokenomics/">View Whitepaper</a>
-      <a href="https://chillingcoin-chc.github.io/CHC-NFT-Mint/">Mint NFT</a>
-      <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0xc50e66bca472da61d0184121e491609b774e2c37">Dextools</a>
-      <a href="https://www.geckoterminal.com/bsc/pools/0xc50e66bca472da61d0184121e491609b774e2c37">GeckoTerminal</a>
-      <a href="https://coinpaprika.com/coin/chc-chillingcoin/">CoinPaprika</a>
-      <a href="https://chc-staking-dapp.vercel.app">Stake CHC</a>
-    </div>
-  </div>
-
-  <!-- SECTION 3: Listings & More -->
-  <div class="section" style="background-image: url('logo.jpeg.png');">
-    <h2 class="blinking-title">Listings</h2>
-    <div class="listings">
-      <a href="https://top100token.com/address/0xc50e66bca472da61d0184121e491609b774e2c37">Top100Token</a>
-      <a href="https://coinboom.net/coin/chilling-coin">CoinBoom</a>
-      <a href="https://coindizzy.com/binance/0xc50e66bca472da61d0184121e491609b774e2c37">CoinDizzy</a>
-      <a href="https://coincatapult.com/coin/chilling-coin-chc">CoinCatapult</a>
-      <a href="https://www.coinscope.co/coin/4-chc">CoinScope</a>
-      <span style="color: #aaa;">CoinGecko & CoinMarketCap - Coming Soon</span>
-    </div>
-
-    <h2 class="blinking-title" style="margin-top: 4rem;">Join Our Community</h2>
-    <div class="community">
-      <a href="https://t.me/Chillingcoinbsc0">Telegram</a>
-      <a href="https://x.com/chillingchc">Twitter / X</a>
-      <a href="https://discord.gg/yF9C36dV">Discord</a>
-    </div>
-
-    <div class="roadmap">
-      <h2 class="blinking-title" style="margin-top: 4rem;">Roadmap</h2>
-      <ul>
-        <li>✅ Token Launched</li>
-        <li>✅ Smart Contract Verified</li>
-        <li>✅ NFTs Mint Live</li>
-        <li>🚀 Listed on Top100Token, CoinDizzy, CoinBoom, CoinCatapult, CoinScope</li>
-        <li>⏳ CoinGecko & CoinMarketCap Pending</li>
-        <li>🎯 Marketing Campaign & Partnerships</li>
-        <li class="blinking-title">📈 Community Growth & DAO Formation</li>
-      </ul>
-    </div>
-
-    <h2 style="margin-top: 4rem;">Smart Contract Audit</h2>
-    <a class="audit-button" href="https://honeypot.is/?address=0xc50e66bca472da61d0184121e491609b774e2c37" target="_blank">
-      View Honeypot Audit Report
-    </a>
-  </div>
-
-  <footer>
-    &copy; 2025 ChillingCoin ($CHC). All rights reserved.
-  </footer>
-
-  <script>
-    const text = "Welcome to $CHC";
-    const typingElement = document.getElementById("typingText");
-
-    let index = 0;
-    let isDeleting = false;
-
-    function typeEffect() {
-      if (!isDeleting) {
-        typingElement.textContent = text.substring(0, index++);
-        if (index > text.length) {
-
-
-Here is your **final full HTML code** with the following updates:
-
-### ✅ Changes Made:
-- **Removed** the small logo from the top section.
-- **Kept** all 3 full-screen background images:
-  1. `chc-banner.jpeg.jpg` — top section
-  2. `chc-banner2.jpeg.jpg` — Get Started section
-  3. `logo.jpeg.png` — background for Listings, Community, Roadmap, and Audit.
-- **Stylish** animated **"Welcome to $CHC"** text using `Great Vibes`, placed near the lady’s lips.
-
----
-
-### ✅ Final `index.html` Code:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ChillingCoin ($CHC)</title>
-
-  <!-- Stylish Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #000;
-      color: #fff;
-      scroll-behavior: smooth;
-    }
-
-    .section {
-      width: 100%;
-      min-height: 100vh;
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 3rem 1rem;
-      text-align: center;
-      position: relative;
-    }
-
-    .typing-text {
+    .welcome-message {
       position: absolute;
-      top: 47%;
+      top: 20%;
       left: 50%;
       transform: translateX(-50%);
-      font-family: 'Great Vibes', cursive;
-      font-size: 2rem;
-      color: #00ffd8;
-      text-shadow: 0 0 10px rgba(0, 255, 200, 0.8);
-      white-space: nowrap;
-      border-right: 2px solid #00ffd8;
-      overflow: hidden;
+      font-size: 1.8rem;
+      color: #00ffe7;
+      text-shadow: 0 0 5px #00ffe7, 0 0 10px #00ffe7, 0 0 20px #00ffe7;
+      animation: bounce 2s infinite alternate;
       z-index: 10;
     }
 
-    .animated-title {
-      font-size: 3rem;
-      color: #00ffd8;
-      font-weight: bold;
-      animation: floatText 4s ease-in-out infinite;
+    @keyframes bounce {
+      0% { transform: translate(-50%, 0); }
+      100% { transform: translate(-50%, -10px); }
     }
 
-    @keyframes floatText {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+    #typingText {
+      font-size: 2.2rem;
+      margin-top: 1rem;
+      color: #ffffff;
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff;
     }
 
-    h2 {
-      color: #00ffd8;
-      margin-bottom: 1rem;
-      font-size: 2rem;
+    .buttons {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
     }
 
     .buttons a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 1rem 2rem;
-      background-color: #00ffd8;
-      color: #000;
-      border-radius: 8px;
       text-decoration: none;
+      padding: 12px 20px;
+      background: #00ffe7;
+      color: #000;
       font-weight: bold;
+      border-radius: 6px;
       transition: background 0.3s;
     }
 
     .buttons a:hover {
-      background-color: #00cbb0;
+      background: #00cccc;
     }
 
-    .listings, .community {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
+    .listings, .community, .roadmap, .audit {
+      margin-top: 3rem;
     }
 
     .listings a, .community a {
-      color: #fff;
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 0.8rem 1.2rem;
-      border-radius: 8px;
+      display: block;
+      color: #00ffe7;
+      margin: 5px 0;
+      font-weight: bold;
       text-decoration: none;
-      font-weight: 500;
+      animation: blink 1.5s infinite alternate;
+    }
+
+    @keyframes blink {
+      0% { opacity: 0.3; }
+      100% { opacity: 1; }
     }
 
     .roadmap ul {
       list-style: none;
       padding: 0;
-      margin-top: 1rem;
     }
 
     .roadmap li {
-      margin: 0.5rem 0;
-      font-size: 1.1rem;
+      margin: 8px 0;
+      animation: blink 2s infinite alternate;
     }
 
-    .audit-button {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      color: #fff;
-      background: linear-gradient(270deg, #00ffd8, #00cbb0);
-      background-size: 400% 400%;
-      animation: gradientMove 6s ease infinite;
-      border-radius: 10px;
-      text-decoration: none;
+    .audit {
+      margin-top: 5rem;
+      padding-bottom: 2rem;
+      animation: fadeInUp 1s ease-in-out;
     }
 
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+    @media (max-width: 768px) {
+      .animated-title {
+        font-size: 2.2rem;
+      }
 
-    .blinking-title {
-      animation: blink 1.5s infinite;
-    }
+      .buttons a {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+      }
 
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
-    }
-
-    footer {
-      margin: 3rem 0 1rem;
-      font-size: 0.9rem;
-      color: #ccc;
-      text-align: center;
+      .welcome-message {
+        font-size: 1.2rem;
+        top: 15%;
+      }
     }
   </style>
 </head>
@@ -403,13 +149,14 @@ Here is your **final full HTML code** with the following updates:
 
   <!-- SECTION 1: Hero -->
   <div class="section" style="background-image: url('chc-banner.jpeg.jpg');">
-    <div class="typing-text" id="typingText"></div>
+    <div class="welcome-message" id="typingText"></div>
+    <img src="logo.jpeg.png" alt="ChillingCoin Logo" class="logo"/>
     <h1 class="animated-title">$CHC - ChillingCoin</h1>
   </div>
 
   <!-- SECTION 2: Get Started -->
   <div class="section" style="background-image: url('chc-banner2.jpeg.jpg');">
-    <h2>Get Started</h2>
+    <h2 style="text-shadow: 1px 1px 4px #000;">Get Started</h2>
     <div class="buttons">
       <a href="https://pancakeswap.finance/swap?outputCurrency=0xc50e66bca472da61d0184121e491609b774e2c37">Buy on PancakeSwap</a>
       <a href="https://chillingcoin.gitbook.io/tokenomics/">View Whitepaper</a>
@@ -421,19 +168,19 @@ Here is your **final full HTML code** with the following updates:
     </div>
   </div>
 
-  <!-- SECTION 3: Listings & More -->
+  <!-- SECTION 3: Listings & Community -->
   <div class="section" style="background-image: url('logo.jpeg.png');">
-    <h2 class="blinking-title">Listings</h2>
+    <h2>Listings</h2>
     <div class="listings">
       <a href="https://top100token.com/address/0xc50e66bca472da61d0184121e491609b774e2c37">Top100Token</a>
       <a href="https://coinboom.net/coin/chilling-coin">CoinBoom</a>
       <a href="https://coindizzy.com/binance/0xc50e66bca472da61d0184121e491609b774e2c37">CoinDizzy</a>
       <a href="https://coincatapult.com/coin/chilling-coin-chc">CoinCatapult</a>
       <a href="https://www.coinscope.co/coin/4-chc">CoinScope</a>
-      <span style="color: #aaa;">CoinGecko & CoinMarketCap - Coming Soon</span>
+      <span style="color: #ccc;">CoinGecko & CoinMarketCap - Coming Soon</span>
     </div>
 
-    <h2 class="blinking-title" style="margin-top: 4rem;">Join Our Community</h2>
+    <h2 style="margin-top: 4rem;">Join Our Community</h2>
     <div class="community">
       <a href="https://t.me/Chillingcoinbsc0">Telegram</a>
       <a href="https://x.com/chillingchc">Twitter / X</a>
@@ -441,7 +188,7 @@ Here is your **final full HTML code** with the following updates:
     </div>
 
     <div class="roadmap">
-      <h2 class="blinking-title" style="margin-top: 4rem;">Roadmap</h2>
+      <h2 style="margin-top: 4rem;">Roadmap</h2>
       <ul>
         <li>✅ Token Launched</li>
         <li>✅ Smart Contract Verified</li>
@@ -449,19 +196,15 @@ Here is your **final full HTML code** with the following updates:
         <li>🚀 Listed on Top100Token, CoinDizzy, CoinBoom, CoinCatapult, CoinScope</li>
         <li>⏳ CoinGecko & CoinMarketCap Pending</li>
         <li>🎯 Marketing Campaign & Partnerships</li>
-        <li class="blinking-title">📈 Community Growth & DAO Formation</li>
+        <li>📈 Community Growth & DAO Formation</li>
       </ul>
     </div>
 
-    <h2 style="margin-top: 4rem;">Smart Contract Audit</h2>
-    <a class="audit-button" href="https://honeypot.is/?address=0xc50e66bca472da61d0184121e491609b774e2c37" target="_blank">
-      View Honeypot Audit Report
-    </a>
+    <div class="audit">
+      <h2>Audit & Security</h2>
+      <p style="max-width: 600px; margin: 0 auto;">ChillingCoin has passed contract verification. Further audits are planned with top blockchain security firms for enhanced trust and transparency.</p>
+    </div>
   </div>
-
-  <footer>
-    &copy; 2025 ChillingCoin ($CHC). All rights reserved.
-  </footer>
 
   <!-- Typing Script -->
   <script>
@@ -478,20 +221,21 @@ Here is your **final full HTML code** with the following updates:
           isDeleting = true;
           setTimeout(typeEffect, 1000);
         } else {
-          setTimeout(typeEffect, 100);
+          setTimeout(typeEffect, 120);
         }
       } else {
         typingElement.textContent = text.substring(0, index--);
         if (index < 0) {
           isDeleting = false;
-          setTimeout(typeEffect, 500);
+          setTimeout(typeEffect, 600);
         } else {
-          setTimeout(typeEffect, 60);
+          setTimeout(typeEffect, 70);
         }
       }
     }
 
     typeEffect();
   </script>
+
 </body>
 </html>
