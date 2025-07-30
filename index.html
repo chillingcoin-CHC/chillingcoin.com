@@ -18,7 +18,7 @@
     }
 
     .overlay {
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.65);
       padding: 2rem;
       min-height: 100vh;
       display: flex;
@@ -42,7 +42,7 @@
 
     @keyframes pulse {
       0% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.05); opacity: 0.85; }
+      50% { transform: scale(1.08); opacity: 0.9; }
       100% { transform: scale(1); opacity: 1; }
     }
 
@@ -69,16 +69,22 @@
     }
 
     .section-title {
-      font-size: 1.5rem;
-      margin: 2rem 0 1rem;
+      font-size: 1.7rem;
+      margin: 2.5rem 0 1rem;
       color: #ffef95;
+      border-bottom: 2px solid #00ffd8;
+      padding-bottom: 0.5rem;
+      width: 90%;
+      max-width: 700px;
     }
 
-    .listing-links a {
+    .listing-links a,
+    .community-links a {
       display: block;
-      margin: 0.3rem 0;
+      margin: 0.4rem 0;
       color: #00ffd8;
       text-decoration: none;
+      font-size: 1rem;
     }
 
     .contract {
@@ -88,18 +94,28 @@
       padding: 1rem;
       border-radius: 8px;
       color: #ffef95;
+      word-break: break-all;
+      max-width: 90%;
     }
 
     iframe {
       margin-top: 2rem;
       border-radius: 12px;
       max-width: 90%;
+      width: 560px;
+      height: 315px;
     }
 
     footer {
       margin-top: 3rem;
       font-size: 0.9rem;
       color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      .btn { padding: 0.8rem 1.2rem; font-size: 0.9rem; }
+      .chc-name { font-size: 2rem; }
+      iframe { width: 100%; height: auto; }
     }
   </style>
 </head>
@@ -112,9 +128,10 @@
       <a href="https://pancakeswap.finance/swap?outputCurrency=0xc50e66bca472da61d0184121e491609b774e2c37" class="btn">Buy on PancakeSwap</a>
       <a href="https://chillingcoin.gitbook.io/tokenomics/" class="btn">View Whitepaper</a>
       <a href="https://chillingcoin-chc.github.io/CHC-NFT-Mint/" class="btn">Mint CHC NFT</a>
-      <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0xc50e66bca472da61d0184121e491609b774e2c37" class="btn">Dextools</a>
+      <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0xc50e66bca472da61d0184121e491609b774e2c37" class="btn">View on DEXTools</a>
       <a href="https://www.geckoterminal.com/bsc/pools/0xc50e66bca472da61d0184121e491609b774e2c37" class="btn">GeckoTerminal</a>
       <a href="https://coinpaprika.com/coin/chc-chillingcoin/" class="btn">CoinPaprika</a>
+      <a href="https://github.com/ChillingCoin-CHC/Audit/raw/main/CHC-Audit.pdf" class="btn">Smart Contract Audit</a>
     </div>
 
     <div class="section-title">Listings</div>
@@ -123,7 +140,7 @@
       <a href="https://coinboom.net/coin/chilling-coin">CoinBoom</a>
       <a href="https://coindizzy.com/binance/0xc50e66bca472da61d0184121e491609b774e2c37">CoinDizzy</a>
       <a href="https://coincatapult.com/coin/chilling-coin-chc">CoinCatapult</a>
-      <a href="https://www.coinscope.co/coin/4-chc">Coinscope</a>
+      <a href="https://www.coinscope.co/coin/4-chc">CoinScope</a>
       <span style="color:#aaa;">CoinGecko – coming soon</span>
       <span style="color:#aaa;">CoinMarketCap – coming soon</span>
     </div>
@@ -133,9 +150,16 @@
       0xc50e66bca472da61d0184121e491609b774e2c37
     </div>
 
-    <!-- Replace YOUR_VIDEO_ID with your actual YouTube ID -->
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+    <div class="section-title">Trailer</div>
+    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
       title="CHC Trailer" frameborder="0" allowfullscreen></iframe>
+
+    <div class="section-title">Community</div>
+    <div class="community-links">
+      <a href="https://t.me/Chillingcoinbsc0" target="_blank">Telegram</a>
+      <a href="https://x.com/chillingchc" target="_blank">X (Twitter)</a>
+      <a href="https://discord.gg/yF9C36dV" target="_blank">Discord</a>
+    </div>
 
     <footer>
       &copy; 2025 ChillingCoin ($CHC). All rights reserved.
