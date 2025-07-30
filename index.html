@@ -19,13 +19,10 @@
     }
 
     #particles-js {
-      position: fixed;
-      top: 0;
-      left: 0;
+      position: absolute;
       width: 100%;
       height: 100%;
       z-index: 0;
-      pointer-events: none;
     }
 
     .section {
@@ -44,17 +41,6 @@
       z-index: 1;
     }
 
-    .section::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: -1;
-    }
-
     .welcome-blink {
       position: absolute;
       top: 12%;
@@ -62,6 +48,7 @@
       color: #00ffd8;
       animation: fadeBlink 2.5s infinite;
       font-weight: 500;
+      z-index: 2;
     }
 
     @keyframes fadeBlink {
@@ -74,6 +61,7 @@
       color: #00ffd8;
       font-weight: bold;
       animation: floatText 4s ease-in-out infinite;
+      z-index: 2;
     }
 
     @keyframes floatText {
@@ -178,90 +166,125 @@
 </head>
 <body>
 
-<!-- Particles.js background -->
-<div id="particles-js"></div>
-
-<!-- SECTION 1: Hero -->
-<div class="section" style="background-image: url('chc-banner.jpeg.jpg');">
-  <div class="welcome-blink">Welcome to $CHC</div>
-  <h1 class="animated-title">$CHC - ChillingCoin</h1>
-</div>
-
-<!-- SECTION 2: Get Started -->
-<div class="section" style="background-image: url('chc-banner2.jpeg.jpg');">
-  <h2>Get Started</h2>
-  <div class="buttons">
-    <a href="https://pancakeswap.finance/swap?outputCurrency=0xc50e66bca472da61d0184121e491609b774e2c37">Buy on PancakeSwap</a>
-    <a href="https://chillingcoin.gitbook.io/tokenomics/">View Whitepaper</a>
-    <a href="https://chillingcoin-chc.github.io/CHC-NFT-Mint/">Mint NFT</a>
-    <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0xc50e66bca472da61d0184121e491609b774e2c37">Dextools</a>
-    <a href="https://www.geckoterminal.com/bsc/pools/0xc50e66bca472da61d0184121e491609b774e2c37">GeckoTerminal</a>
-    <a href="https://coinpaprika.com/coin/chc-chillingcoin/">CoinPaprika</a>
-    <a href="https://chc-staking-dapp.vercel.app">Stake CHC</a>
-  </div>
-</div>
-
-<!-- SECTION 3: Listings, Community, Roadmap, Audit -->
-<div class="section" style="background-image: url('logo.jpeg.png');">
-  <h2 class="blinking-title">Listings</h2>
-  <div class="listings">
-    <a href="https://top100token.com/address/0xc50e66bca472da61d0184121e491609b774e2c37">Top100Token</a>
-    <a href="https://coinboom.net/coin/chilling-coin">CoinBoom</a>
-    <a href="https://coindizzy.com/binance/0xc50e66bca472da61d0184121e491609b774e2c37">CoinDizzy</a>
-    <a href="https://coincatapult.com/coin/chilling-coin-chc">CoinCatapult</a>
-    <a href="https://www.coinscope.co/coin/4-chc">CoinScope</a>
-    <span style="color: #aaa;">CoinGecko & CoinMarketCap - Coming Soon</span>
+  <!-- SECTION 1: Hero with particles -->
+  <div class="section" style="background-image: url('chc-banner.jpeg.jpg');">
+    <div id="particles-js"></div>
+    <div class="welcome-blink">Welcome to $CHC</div>
+    <h1 class="animated-title">$CHC - ChillingCoin</h1>
   </div>
 
-  <h2 class="blinking-title" style="margin-top: 4rem;">Join Our Community</h2>
-  <div class="community">
-    <a href="https://t.me/Chillingcoinbsc0">Telegram</a>
-    <a href="https://x.com/chillingchc">Twitter / X</a>
-    <a href="https://discord.gg/yF9C36dV">Discord</a>
+  <!-- SECTION 2: Get Started -->
+  <div class="section" style="background-image: url('chc-banner2.jpeg.jpg');">
+    <h2>Get Started</h2>
+    <div class="buttons">
+      <a href="https://pancakeswap.finance/swap?outputCurrency=0xc50e66bca472da61d0184121e491609b774e2c37">Buy on PancakeSwap</a>
+      <a href="https://chillingcoin.gitbook.io/tokenomics/">View Whitepaper</a>
+      <a href="https://chillingcoin-chc.github.io/CHC-NFT-Mint/">Mint NFT</a>
+      <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0xc50e66bca472da61d0184121e491609b774e2c37">Dextools</a>
+      <a href="https://www.geckoterminal.com/bsc/pools/0xc50e66bca472da61d0184121e491609b774e2c37">GeckoTerminal</a>
+      <a href="https://coinpaprika.com/coin/chc-chillingcoin/">CoinPaprika</a>
+      <a href="https://chc-staking-dapp.vercel.app">Stake CHC</a>
+    </div>
   </div>
 
-  <div class="roadmap">
-    <h2 class="blinking-title" style="margin-top: 4rem;">Roadmap</h2>
-    <ul>
-      <li>✅ Token Launched</li>
-      <li>✅ Smart Contract Verified</li>
-      <li>✅ NFTs Mint Live</li>
-      <li>🚀 Listed on Top100Token, CoinDizzy, CoinBoom, CoinCatapult, CoinScope</li>
-      <li>⏳ CoinGecko & CoinMarketCap Pending</li>
-      <li>🎯 Marketing Campaign & Partnerships</li>
-      <li class="blinking-title">📈 Community Growth & DAO Formation</li>
-    </ul>
+  <!-- SECTION 3: Listings, Community, Roadmap, Audit -->
+  <div class="section" style="background-image: url('logo.jpeg.png');">
+    <h2 class="blinking-title">Listings</h2>
+    <div class="listings">
+      <a href="https://top100token.com/address/0xc50e66bca472da61d0184121e491609b774e2c37">Top100Token</a>
+      <a href="https://coinboom.net/coin/chilling-coin">CoinBoom</a>
+      <a href="https://coindizzy.com/binance/0xc50e66bca472da61d0184121e491609b774e2c37">CoinDizzy</a>
+      <a href="https://coincatapult.com/coin/chilling-coin-chc">CoinCatapult</a>
+      <a href="https://www.coinscope.co/coin/4-chc">CoinScope</a>
+      <span style="color: #aaa;">CoinGecko & CoinMarketCap - Coming Soon</span>
+    </div>
+
+    <h2 class="blinking-title" style="margin-top: 4rem;">Join Our Community</h2>
+    <div class="community">
+      <a href="https://t.me/Chillingcoinbsc0">Telegram</a>
+      <a href="https://x.com/chillingchc">Twitter / X</a>
+      <a href="https://discord.gg/yF9C36dV">Discord</a>
+    </div>
+
+    <div class="roadmap">
+      <h2 class="blinking-title" style="margin-top: 4rem;">Roadmap</h2>
+      <ul>
+        <li>✅ Token Launched</li>
+        <li>✅ Smart Contract Verified</li>
+        <li>✅ NFTs Mint Live</li>
+        <li>🚀 Listed on Top100Token, CoinDizzy, CoinBoom, CoinCatapult, CoinScope</li>
+        <li>⏳ CoinGecko & CoinMarketCap Pending</li>
+        <li>🎯 Marketing Campaign & Partnerships</li>
+        <li class="blinking-title">📈 Community Growth & DAO Formation</li>
+      </ul>
+    </div>
+
+    <div class="audit-section">
+      <h2 class="blinking-title">Smart Contract Audit</h2>
+      <a class="audit-button" href="https://honeypot.is/?address=0xc50e66bca472da61d0184121e491609b774e2c37" target="_blank">
+        View Honeypot Audit Report
+      </a>
+    </div>
   </div>
 
-  <div class="audit-section">
-    <h2 class="blinking-title">Smart Contract Audit</h2>
-    <a class="audit-button" href="https://honeypot.is/?address=0xc50e66bca472da61d0184121e491609b774e2c37" target="_blank">
-      View Honeypot Audit Report
-    </a>
-  </div>
-</div>
+  <footer>
+    &copy; 2025 ChillingCoin ($CHC). All rights reserved.
+  </footer>
 
-<footer>
-  &copy; 2025 ChillingCoin ($CHC). All rights reserved.
-</footer>
-
-<!-- Load particles.js -->
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<script>
-  particlesJS("particles-js", {
-    "particles": {
-      "number": { "value": 60 },
-      "size": { "value": 3 },
-      "color": { "value": "#00ffd8" },
-      "line_linked": {
-        "enable": true,
-        "color": "#00ffd8"
+  <!-- Particles.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 60,
+          "density": { "enable": true, "value_area": 800 }
+        },
+        "color": { "value": "#00ffd8" },
+        "shape": {
+          "type": "circle",
+          "stroke": { "width": 0, "color": "#000" }
+        },
+        "opacity": {
+          "value": 0.6,
+          "random": true,
+          "anim": { "enable": false }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": { "enable": false }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 120,
+          "color": "#00ffd8",
+          "opacity": 0.3,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 2,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out"
+        }
       },
-      "move": {
-        "speed": 1
-      }
-    }
-  });
-</script>
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "grab" },
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+          "grab": { "distance": 140, "line_linked": { "opacity": 0.5 } },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+
 </body>
 </html>
