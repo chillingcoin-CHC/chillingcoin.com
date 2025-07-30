@@ -5,35 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ChillingCoin ($CHC)</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      color: #fff;
-      text-align: center;
-      background-color: #000;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .hero {
-      background-image: url('chc-banner.jpeg.jpg');
-      background-size: contain;
+    body, html {
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      background-color: #000;
+      scroll-behavior: smooth;
+    }
+
+    .bg-section {
+      background-size: cover;
+      background-position: center;
       background-repeat: no-repeat;
-      background-position: center top;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: start;
+      justify-content: center;
       align-items: center;
-      padding-top: 2rem;
+      text-align: center;
+      padding: 3rem 1rem;
     }
 
-    .background-section {
+    .intro {
+      background-image: url('chc-banner.jpeg.jpg');
+    }
+
+    .second-bg {
       background-image: url('logo.jpeg.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center top;
-      background-color: #000;
-      min-height: 100vh;
-      padding-top: 2rem;
     }
 
     .logo {
@@ -43,8 +46,8 @@
 
     .animated-title {
       font-size: 3rem;
-      color: #00ffd8;
       font-weight: bold;
+      color: #00ffd8;
       animation: floatText 4s ease-in-out infinite;
     }
 
@@ -54,16 +57,19 @@
     }
 
     .section {
-      margin: 3rem auto;
-      padding: 2rem 1rem;
-      max-width: 900px;
-      background-color: rgba(0, 0, 0, 0.4);
+      padding: 4rem 1rem;
+      max-width: 960px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: rgba(0,0,0,0.5);
       border-radius: 16px;
+      margin-bottom: 2rem;
     }
 
-    h2 {
+    .section h2 {
+      font-size: 2rem;
       color: #00ffd8;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
 
     .buttons a {
@@ -73,8 +79,8 @@
       background-color: #00ffd8;
       color: #000;
       border-radius: 8px;
-      text-decoration: none;
       font-weight: bold;
+      text-decoration: none;
       transition: background 0.3s;
     }
 
@@ -91,7 +97,7 @@
 
     .listings a, .community a {
       color: #fff;
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(255,255,255,0.1);
       padding: 0.8rem 1.2rem;
       border-radius: 8px;
       text-decoration: none;
@@ -101,12 +107,11 @@
     .roadmap ul {
       list-style: none;
       padding: 0;
-      margin: 1rem 0;
     }
 
     .roadmap li {
-      margin: 0.5rem 0;
       font-size: 1.1rem;
+      margin: 0.5rem 0;
     }
 
     .audit-button {
@@ -129,35 +134,47 @@
     }
 
     footer {
+      text-align: center;
       margin: 3rem 0 1rem;
       font-size: 0.9rem;
       color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .animated-title {
+        font-size: 2.2rem;
+      }
+
+      .buttons a {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- HERO SECTION with first image -->
-  <div class="hero">
-    <img src="logo.jpeg.png" alt="ChillingCoin Logo" class="logo"/>
+  <!-- Top Background Section -->
+  <div class="bg-section intro">
+    <img src="logo.jpeg.png" alt="ChillingCoin Logo" class="logo" />
     <h1 class="animated-title">$CHC - ChillingCoin</h1>
+  </div>
 
-    <div class="section">
-      <h2>Get Started</h2>
-      <div class="buttons">
-        <a href="https://pancakeswap.finance/swap?outputCurrency=0xc50e66bca472da61d0184121e491609b774e2c37">Buy on PancakeSwap</a>
-        <a href="https://chillingcoin.gitbook.io/tokenomics/">View Whitepaper</a>
-        <a href="https://chillingcoin-chc.github.io/CHC-NFT-Mint/">Mint NFT</a>
-        <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0xc50e66bca472da61d0184121e491609b774e2c37">Dextools</a>
-        <a href="https://www.geckoterminal.com/bsc/pools/0xc50e66bca472da61d0184121e491609b774e2c37">GeckoTerminal</a>
-        <a href="https://coinpaprika.com/coin/chc-chillingcoin/">CoinPaprika</a>
-      </div>
+  <!-- Get Started Section -->
+  <div class="section">
+    <h2>Get Started</h2>
+    <div class="buttons">
+      <a href="https://pancakeswap.finance/swap?outputCurrency=0xc50e66bca472da61d0184121e491609b774e2c37">Buy on PancakeSwap</a>
+      <a href="https://chillingcoin.gitbook.io/tokenomics/">View Whitepaper</a>
+      <a href="https://chillingcoin-chc.github.io/CHC-NFT-Mint/">Mint NFT</a>
+      <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0xc50e66bca472da61d0184121e491609b774e2c37">Dextools</a>
+      <a href="https://www.geckoterminal.com/bsc/pools/0xc50e66bca472da61d0184121e491609b774e2c37">GeckoTerminal</a>
+      <a href="https://coinpaprika.com/coin/chc-chillingcoin/">CoinPaprika</a>
     </div>
   </div>
 
-  <!-- SECOND BACKGROUND starts here -->
-  <div class="background-section">
-
+  <!-- Second Background Section with Remaining Content -->
+  <div class="bg-section second-bg">
     <div class="section">
       <h2>Listings</h2>
       <div class="listings">
@@ -198,7 +215,6 @@
         View Honeypot Audit Report
       </a>
     </div>
-
   </div>
 
   <footer>
