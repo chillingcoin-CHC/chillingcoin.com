@@ -16,35 +16,34 @@
       background-color: #000;
       color: #fff;
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
     .section {
       width: 100%;
       min-height: 100vh;
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
+      position: relative;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       padding: 3rem 1rem;
       text-align: center;
-      position: relative;
-      z-index: 1;
     }
 
-    .particles-container {
+    .particles-bg {
       position: absolute;
-      top: 0; left: 0;
-      width: 100%;
+      top: 0;
+      left: 0;
       height: 100%;
+      width: 100%;
       z-index: 0;
     }
 
-    .section > * {
-      z-index: 1;
+    .section-content {
       position: relative;
+      z-index: 1;
+      width: 100%;
     }
 
     .welcome-blink {
@@ -166,70 +165,90 @@
       color: #ccc;
       text-align: center;
     }
+
+    /* Background images per section */
+    .hero-section {
+      background: url('chc-banner.jpeg.jpg') no-repeat center center / cover;
+    }
+
+    .get-started-section {
+      background: url('chc-banner2.jpeg.jpg') no-repeat center center / cover;
+    }
+
+    .logo-section {
+      background: url('logo.jpeg.png') no-repeat center top;
+      background-size: contain;
+    }
   </style>
 </head>
 <body>
 
   <!-- SECTION 1: Hero -->
-  <div class="section" style="background-image: url('chc-banner.jpeg.jpg');" id="particles-1">
-    <div class="particles-container" id="particles-js-1"></div>
-    <div class="welcome-blink">Welcome to $CHC</div>
-    <h1 class="animated-title">$CHC - ChillingCoin</h1>
+  <div class="section hero-section">
+    <div id="particles-hero" class="particles-bg"></div>
+    <div class="section-content">
+      <div class="welcome-blink">Welcome to $CHC</div>
+      <h1 class="animated-title">$CHC - ChillingCoin</h1>
+    </div>
   </div>
 
   <!-- SECTION 2: Get Started -->
-  <div class="section" style="background-image: url('chc-banner2.jpeg.jpg');" id="particles-2">
-    <div class="particles-container" id="particles-js-2"></div>
-    <h2>Get Started</h2>
-    <div class="buttons">
-      <a href="https://pancakeswap.finance/swap?outputCurrency=0xc50e66bca472da61d0184121e491609b774e2c37">Buy on PancakeSwap</a>
-      <a href="https://chillingcoin.gitbook.io/tokenomics/">View Whitepaper</a>
-      <a href="https://chillingcoin-chc.github.io/CHC-NFT-Mint/">Mint NFT</a>
-      <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0xc50e66bca472da61d0184121e491609b774e2c37">Dextools</a>
-      <a href="https://www.geckoterminal.com/bsc/pools/0xc50e66bca472da61d0184121e491609b774e2c37">GeckoTerminal</a>
-      <a href="https://coinpaprika.com/coin/chc-chillingcoin/">CoinPaprika</a>
-      <a href="https://chc-staking-dapp.vercel.app">Stake CHC</a>
+  <div class="section get-started-section">
+    <div id="particles-start" class="particles-bg"></div>
+    <div class="section-content">
+      <h2>Get Started</h2>
+      <div class="buttons">
+        <a href="https://pancakeswap.finance/swap?outputCurrency=0xc50e66bca472da61d0184121e491609b774e2c37">Buy on PancakeSwap</a>
+        <a href="https://chillingcoin.gitbook.io/tokenomics/">View Whitepaper</a>
+        <a href="https://chillingcoin-chc.github.io/CHC-NFT-Mint/">Mint NFT</a>
+        <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0xc50e66bca472da61d0184121e491609b774e2c37">Dextools</a>
+        <a href="https://www.geckoterminal.com/bsc/pools/0xc50e66bca472da61d0184121e491609b774e2c37">GeckoTerminal</a>
+        <a href="https://coinpaprika.com/coin/chc-chillingcoin/">CoinPaprika</a>
+        <a href="https://chc-staking-dapp.vercel.app">Stake CHC</a>
+      </div>
     </div>
   </div>
 
   <!-- SECTION 3: Listings, Community, Roadmap, Audit -->
-  <div class="section" style="background-image: url('logo.jpeg.png');" id="particles-3">
-    <div class="particles-container" id="particles-js-3"></div>
-    <h2 class="blinking-title">Listings</h2>
-    <div class="listings">
-      <a href="https://top100token.com/address/0xc50e66bca472da61d0184121e491609b774e2c37">Top100Token</a>
-      <a href="https://coinboom.net/coin/chilling-coin">CoinBoom</a>
-      <a href="https://coindizzy.com/binance/0xc50e66bca472da61d0184121e491609b774e2c37">CoinDizzy</a>
-      <a href="https://coincatapult.com/coin/chilling-coin-chc">CoinCatapult</a>
-      <a href="https://www.coinscope.co/coin/4-chc">CoinScope</a>
-      <span style="color: #aaa;">CoinGecko & CoinMarketCap - Coming Soon</span>
-    </div>
+  <div class="section logo-section">
+    <div id="particles-logo" class="particles-bg"></div>
+    <div class="section-content">
+      <h2 class="blinking-title">Listings</h2>
+      <div class="listings">
+        <a href="https://top100token.com/address/0xc50e66bca472da61d0184121e491609b774e2c37">Top100Token</a>
+        <a href="https://coinboom.net/coin/chilling-coin">CoinBoom</a>
+        <a href="https://coindizzy.com/binance/0xc50e66bca472da61d0184121e491609b774e2c37">CoinDizzy</a>
+        <a href="https://coincatapult.com/coin/chilling-coin-chc">CoinCatapult</a>
+        <a href="https://www.coinscope.co/coin/4-chc">CoinScope</a>
+        <span style="color: #aaa;">CoinGecko & CoinMarketCap - Coming Soon</span>
+      </div>
 
-    <h2 class="blinking-title" style="margin-top: 4rem;">Join Our Community</h2>
-    <div class="community">
-      <a href="https://t.me/Chillingcoinbsc0">Telegram</a>
-      <a href="https://x.com/chillingchc">Twitter / X</a>
-      <a href="https://discord.gg/yF9C36dV">Discord</a>
-    </div>
+      <h2 class="blinking-title" style="margin-top: 4rem;">Join Our Community</h2>
+      <div class="community">
+        <a href="https://t.me/Chillingcoinbsc0">Telegram</a>
+        <a href="https://x.com/chillingchc">Twitter / X</a>
+        <a href="https://discord.gg/yF9C36dV">Discord</a>
+      </div>
 
-    <div class="roadmap">
-      <h2 class="blinking-title" style="margin-top: 4rem;">Roadmap</h2>
-      <ul>
-        <li>✅ Token Launched</li>
-        <li>✅ Smart Contract Verified</li>
-        <li>✅ NFTs Mint Live</li>
-        <li>🚀 Listed on Top100Token, CoinDizzy, CoinBoom, CoinCatapult, CoinScope</li>
-        <li>⏳ CoinGecko & CoinMarketCap Pending</li>
-        <li>🎯 Marketing Campaign & Partnerships</li>
-        <li class="blinking-title">📈 Community Growth & DAO Formation</li>
-      </ul>
-    </div>
+      <div class="roadmap">
+        <h2 class="blinking-title" style="margin-top: 4rem;">Roadmap</h2>
+        <ul>
+          <li>✅ Token Launched</li>
+          <li>✅ Smart Contract Verified</li>
+          <li>✅ NFTs Mint Live</li>
+          <li>🚀 Listed on Top100Token, CoinDizzy, CoinBoom, CoinCatapult, CoinScope</li>
+          <li>⏳ CoinGecko & CoinMarketCap Pending</li>
+          <li>🎯 Marketing Campaign & Partnerships</li>
+          <li class="blinking-title">📈 Community Growth & DAO Formation</li>
+        </ul>
+      </div>
 
-    <div class="audit-section">
-      <h2 class="blinking-title">Smart Contract Audit</h2>
-      <a class="audit-button" href="https://honeypot.is/?address=0xc50e66bca472da61d0184121e491609b774e2c37" target="_blank">
-        View Honeypot Audit Report
-      </a>
+      <div class="audit-section">
+        <h2 class="blinking-title">Smart Contract Audit</h2>
+        <a class="audit-button" href="https://honeypot.is/?address=0xc50e66bca472da61d0184121e491609b774e2c37" target="_blank">
+          View Honeypot Audit Report
+        </a>
+      </div>
     </div>
   </div>
 
@@ -237,23 +256,38 @@
     &copy; 2025 ChillingCoin ($CHC). All rights reserved.
   </footer>
 
-  <!-- Scripts -->
+  <!-- Particles.js Script -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
-    const config = {
-      particles: {
-        number: { value: 60 },
-        color: { value: "#00ffd8" },
-        shape: { type: "circle" },
-        opacity: { value: 0.5 },
-        size: { value: 3 },
-        move: { enable: true, speed: 1 }
+    particlesJS("particles-hero", {
+      "particles": {
+        "number": { "value": 80 },
+        "size": { "value": 3 },
+        "color": { "value": "#00ffd8" },
+        "line_linked": { "enable": true, "color": "#00ffd8" },
+        "move": { "enable": true, "speed": 2 }
       }
-    };
+    });
 
-    particlesJS("particles-js-1", config);
-    particlesJS("particles-js-2", config);
-    particlesJS("particles-js-3", config);
+    particlesJS("particles-start", {
+      "particles": {
+        "number": { "value": 60 },
+        "size": { "value": 3 },
+        "color": { "value": "#00ffd8" },
+        "line_linked": { "enable": true, "color": "#00ffd8" },
+        "move": { "enable": true, "speed": 2 }
+      }
+    });
+
+    particlesJS("particles-logo", {
+      "particles": {
+        "number": { "value": 70 },
+        "size": { "value": 3 },
+        "color": { "value": "#00ffd8" },
+        "line_linked": { "enable": true, "color": "#00ffd8" },
+        "move": { "enable": true, "speed": 2 }
+      }
+    });
   </script>
 </body>
 </html>
