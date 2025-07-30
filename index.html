@@ -32,6 +32,11 @@
       text-align: center;
     }
 
+    .logo {
+      width: 120px;
+      margin-bottom: 1rem;
+    }
+
     .animated-title {
       font-size: 3rem;
       color: #00ffd8;
@@ -44,20 +49,30 @@
       50% { transform: translateY(-10px); }
     }
 
+    .typing-text {
+      color: #00ffd8;
+      font-size: 1.8rem;
+      font-weight: bold;
+      height: 2.5rem;
+      margin-bottom: 1rem;
+      white-space: nowrap;
+      border-right: 3px solid #00ffd8;
+      overflow: hidden;
+    }
+
+    .blinking-title {
+      animation: blinkText 1.5s infinite;
+    }
+
+    @keyframes blinkText {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
     h2 {
       color: #00ffd8;
       margin-bottom: 1rem;
       font-size: 2rem;
-    }
-
-    .blinking-title {
-      color: #00ffd8;
-      animation: blink 1.5s infinite;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
     }
 
     .buttons a {
@@ -104,17 +119,9 @@
       font-size: 1.1rem;
     }
 
-    .audit-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-top: 4rem;
-    }
-
     .audit-button {
       display: inline-block;
-      margin-top: 1rem;
+      margin-top: 1.5rem;
       padding: 1rem 2rem;
       font-size: 1rem;
       color: #fff;
@@ -143,6 +150,7 @@
 
   <!-- SECTION 1: Hero -->
   <div class="section" style="background-image: url('chc-banner.jpeg.jpg');">
+    <div class="typing-text" id="typing"></div>
     <h1 class="animated-title">$CHC - ChillingCoin</h1>
   </div>
 
@@ -160,7 +168,7 @@
     </div>
   </div>
 
-  <!-- SECTION 3: Listings, Community, Roadmap, Audit -->
+  <!-- SECTION 3: Listings & More -->
   <div class="section" style="background-image: url('logo.jpeg.png');">
     <h2 class="blinking-title">Listings</h2>
     <div class="listings">
@@ -192,17 +200,46 @@
       </ul>
     </div>
 
-    <div class="audit-section">
-      <h2 class="blinking-title">Smart Contract Audit</h2>
-      <a class="audit-button" href="https://honeypot.is/?address=0xc50e66bca472da61d0184121e491609b774e2c37" target="_blank">
-        View Honeypot Audit Report
-      </a>
-    </div>
+    <h2 class="blinking-title" style="margin-top: 4rem;">Smart Contract Audit</h2>
+    <a class="audit-button" href="https://honeypot.is/?address=0xc50e66bca472da61d0184121e491609b774e2c37" target="_blank">
+      View Honeypot Audit Report
+    </a>
   </div>
 
   <footer>
     &copy; 2025 ChillingCoin ($CHC). All rights reserved.
   </footer>
+
+  <script>
+    const typingElement = document.getElementById("typing");
+    const text = "Welcome to $CHC - ChillingCoin";
+    let index = 0;
+    let isDeleting = false;
+
+    function typeLoop() {
+      if (!isDeleting) {
+        typingElement.textContent = text.substring(0, index + 1);
+        index++;
+        if (index === text.length) {
+          isDeleting = true;
+          setTimeout(typeLoop, 2000); // Wait before deleting
+        } else {
+          setTimeout(typeLoop, 100);
+        }
+      } else {
+        typingElement.textContent = text.substring(0, index - 1);
+        index--;
+        if (index === 0) {
+          isDeleting = false;
+          setTimeout(typeLoop, 1000); // Pause before retyping
+        } else {
+          setTimeout(typeLoop, 50);
+        }
+      }
+    }
+
+    typeLoop();
+  </script>
 
 </body>
 </html>
