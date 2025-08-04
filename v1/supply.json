@@ -1,9 +1,7 @@
 {
-  "name": "ChillingCoin",
-  "symbol": "CHC",
-  "max_supply": 1000000000000,
-  "burned": 201000000000,
-  "total_supply": 799000000000,
-  "circulating_supply": 799000000000,
-  "timestamp": "2025-07-19T18:00:00Z"
+  "version": "v1",
+  "timestamp": "2025-08-04T12:00:00+01:00",
+  "circulatingSupply": "769,000,000,000 CHC",
+  "burned": "231,000,000,000 CHC",
+  "totalSupply": "1,000,000,000,000 CHC"
 }
