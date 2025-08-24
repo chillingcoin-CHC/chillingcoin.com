@@ -14,8 +14,9 @@
     html, body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #000;
-      color: #fff;
+      color: #00ff00;
       scroll-behavior: smooth;
+      font-weight: bold;
     }
 
     #particles-js {
@@ -45,10 +46,8 @@
       position: absolute;
       top: 12%;
       font-size: 1rem;
-      color: #00ffd8;
+      color: #00ff00;
       animation: fadeBlink 2.5s infinite;
-      font-weight: 500;
-      z-index: 2;
     }
 
     @keyframes fadeBlink {
@@ -58,10 +57,8 @@
 
     .animated-title {
       font-size: 3rem;
-      color: #00ffd8;
-      font-weight: bold;
+      color: #00ff00;
       animation: floatText 4s ease-in-out infinite;
-      z-index: 2;
     }
 
     @keyframes floatText {
@@ -70,13 +67,13 @@
     }
 
     h2 {
-      color: #00ffd8;
+      color: #00ff00;
       margin-bottom: 1rem;
       font-size: 2rem;
     }
 
     .blinking-title {
-      color: #00ffd8;
+      color: #00ff00;
       animation: blink 1.5s infinite;
     }
 
@@ -89,7 +86,7 @@
       display: inline-block;
       margin: 0.5rem;
       padding: 1rem 2rem;
-      background-color: #00ffd8;
+      background-color: #00ff00;
       color: #000;
       border-radius: 8px;
       text-decoration: none;
@@ -98,7 +95,7 @@
     }
 
     .buttons a:hover {
-      background-color: #00cbb0;
+      background-color: #00cc00;
     }
 
     .listings, .community {
@@ -110,12 +107,12 @@
     }
 
     .listings a, .community a {
-      color: #fff;
-      background-color: rgba(255, 255, 255, 0.1);
+      color: #00ff00;
+      background-color: rgba(0, 0, 0, 0.5);
       padding: 0.8rem 1.2rem;
       border-radius: 8px;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: bold;
     }
 
     .roadmap ul {
@@ -142,12 +139,13 @@
       margin-top: 1rem;
       padding: 1rem 2rem;
       font-size: 1rem;
-      color: #fff;
-      background: linear-gradient(270deg, #00ffd8, #00cbb0);
+      color: #000;
+      background: linear-gradient(270deg, #00ff00, #00cc00);
       background-size: 400% 400%;
       animation: gradientMove 6s ease infinite;
       border-radius: 10px;
       text-decoration: none;
+      font-weight: bold;
     }
 
     @keyframes gradientMove {
@@ -159,8 +157,9 @@
     footer {
       margin: 3rem 0 1rem;
       font-size: 0.9rem;
-      color: #ccc;
+      color: #00ff00;
       text-align: center;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -169,16 +168,16 @@
   <!-- SECTION 1: Hero with particles -->
   <div class="section" style="background-image: url('chc-banner.jpeg.jpg');">
     <div id="particles-js"></div>
-    <div class="welcome-blink">Welcome to $CHC</div>
-    <h1 class="animated-title">$CHC - ChillingCoin</h1>
+    <div class="welcome-blink">WELCOME TO $CHC</div>
+    <h1 class="animated-title">$CHC - CHILLINGCOIN</h1>
   </div>
 
   <!-- SECTION 2: Get Started -->
   <div class="section" style="background-image: url('chc-banner2.jpeg.jpg');">
-    <h2>Get Started</h2>
+    <h2>GET STARTED</h2>
     <div class="buttons">
-      <a href="https://swap.transit.finance/?locale=en%25252525252526theme%252525252526inputChain%2525252526inputChain&inputChain=BSC&inputSymbol=BNB&outputChain=BSC&outputCurrency=0xC50E66BcA472dA61D0184121e491609B774e2C37&outputSymbol=CHC#/" target="_blank" class="button">Buy via Transit Swap</a>
-      <a href="https://pancakeswap.finance/swap?outputCurrency=0xC50E66BcA472dA61D0184121e491609B774e2C37" target="_blank" class="button">Buy on PancakeSwap</a>
+      <a href="https://swap.transit.finance/?locale=en%25252525252526theme%252525252526inputChain%2525252526inputChain&inputChain=BSC&inputSymbol=BNB&outputChain=BSC&outputCurrency=0xC50E66BcA472dA61D0184121e491609B774e2C37&outputSymbol=CHC#/" target="_blank">Buy via Transit Swap</a>
+      <a href="https://pancakeswap.finance/swap?outputCurrency=0xC50E66BcA472dA61D0184121e491609B774e2C37" target="_blank">Buy on PancakeSwap</a>
       <a href="https://chilling-coin.gitbook.io/chc-whitepaper/">View Whitepaper</a>
       <a href="https://chillingcoin-chc.github.io/CHC-NFT-Mint/">Mint NFT</a>
       <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0xc50e66bca472da61d0184121e491609b774e2c37">Dextools</a>
@@ -188,53 +187,22 @@
     </div>
   </div>
 
-  <!-- SECTION 3: Token Evolution, Community, Roadmap, Audit -->
-<div class="section" style="background-image: url('logo.jpeg.png');">
-  <h2 class="blinking-title">Token Evolution: CHC SOL</h2>
-  <p style="color: #ffffff; font-size: 16px; max-width: 600px; margin-top: 10px;">
-    CHC SOL represents the next step in our ecosystem, bridging BSC and Solana for a stronger community and growth.
-  </p>
-  <div class="listings">
-    <div style="display: flex; flex-wrap: wrap; gap: 15px; font-family: Arial, sans-serif; margin-top: 20px;">
-      <a href="https://coinfactory.app/tokens/solana/DSfoxByj7HfTdSDVnRm8zvvWbhpjCB61vxaQMkNsE3Pf" 
-         style="font-weight: bold; color: #FFD700; text-decoration: none; transition: color 0.3s;" 
-         onmouseover="this.style.color='#FFA500'" 
-         onmouseout="this.style.color='#FFD700'">
-         CoinFactory
-      </a>
-      
-      <a href="https://coinmun.com/coins/chillingcoin" 
-         style="color: #ffffff; text-decoration: none; transition: color 0.3s;" 
-         onmouseover="this.style.color='#FFD700'" 
-         onmouseout="this.style.color='#ffffff'">
-         CoinMun
-      </a>
-      
-      <a href="https://coingem.com/solana/DSfoxByj7HfTdSDVnRm8zvvWbhpjCB61vxaQMkNsE3Pf" 
-         style="color: #ffffff; text-decoration: none; transition: color 0.3s;" 
-         onmouseover="this.style.color='#FFD700'" 
-         onmouseout="this.style.color='#ffffff'">
-         CoinGem
-      </a>
-      
-      <a href="https://coindizzy.com/solana/DSfoxByj7HfTdSDVnRm8zvvWbhpjCB61vxaQMkNsE3Pf" 
-         style="color: #ffffff; text-decoration: none; transition: color 0.3s;" 
-         onmouseover="this.style.color='#FFD700'" 
-         onmouseout="this.style.color='#ffffff'">
-         CoinDizzy
-      </a>
-      
-      <a href="https://www.freshcoins.io/coins/chilling-coin" 
-         style="color: #ffffff; text-decoration: none; transition: color 0.3s;" 
-         onmouseover="this.style.color='#FFD700'" 
-         onmouseout="this.style.color='#ffffff'">
-         FreshCoins
-      </a>
-    </div>
-  </div>
-</div>
+  <!-- SECTION 3: Token Evolution, Community, Audit -->
+  <div class="section" style="background-image: url('logo.jpeg.png');">
+    <h2 class="blinking-title">TOKEN EVOLUTION: CHC SOL</h2>
+    <p style="color: #00ff00; font-size: 16px; max-width: 600px; margin-top: 10px;">
+      CHC SOL represents the next step in our ecosystem, bridging BSC and Solana for a stronger community and growth.
+    </p>
 
-    <h2 class="blinking-title" style="margin-top: 4rem;">Join Our Community</h2>
+    <div class="listings">
+      <a href="https://coinfactory.app/tokens/solana/DSfoxByj7HfTdSDVnRm8zvvWbhpjCB61vxaQMkNsE3Pf">CoinFactory</a>
+      <a href="https://coinmun.com/coins/chillingcoin">CoinMun</a>
+      <a href="https://coingem.com/solana/DSfoxByj7HfTdSDVnRm8zvvWbhpjCB61vxaQMkNsE3Pf">CoinGem</a>
+      <a href="https://coindizzy.com/solana/DSfoxByj7HfTdSDVnRm8zvvWbhpjCB61vxaQMkNsE3Pf">CoinDizzy</a>
+      <a href="https://www.freshcoins.io/coins/chilling-coin">FreshCoins</a>
+    </div>
+
+    <h2 class="blinking-title" style="margin-top: 4rem;">JOIN OUR COMMUNITY</h2>
     <div class="community">
       <a href="https://t.me/Chillingcoinbsc0">Telegram</a>
       <a href="https://x.com/chillingchc">Twitter / X</a>
@@ -242,7 +210,7 @@
     </div>
 
     <div class="audit-section">
-      <h2 class="blinking-title">Smart Contract Audit</h2>
+      <h2 class="blinking-title">SMART CONTRACT AUDIT</h2>
       <a class="audit-button" href="https://honeypot.is/?address=0xc50e66bca472da61d0184121e491609b774e2c37" target="_blank">
         View Honeypot Audit Report
       </a>
@@ -250,7 +218,7 @@
   </div>
 
   <footer>
-    &copy; 2025 ChillingCoin ($CHC). All rights reserved.
+    &copy; 2025 CHILLINGCOIN ($CHC). ALL RIGHTS RESERVED.
   </footer>
 
   <!-- Particles.js CDN -->
@@ -258,55 +226,21 @@
   <script>
     particlesJS("particles-js", {
       "particles": {
-        "number": {
-          "value": 60,
-          "density": { "enable": true, "value_area": 800 }
-        },
-        "color": { "value": "#00ffd8" },
-        "shape": {
-          "type": "circle",
-          "stroke": { "width": 0, "color": "#000" }
-        },
-        "opacity": {
-          "value": 0.6,
-          "random": true,
-          "anim": { "enable": false }
-        },
-        "size": {
-          "value": 3,
-          "random": true,
-          "anim": { "enable": false }
-        },
-        "line_linked": {
-          "enable": true,
-          "distance": 120,
-          "color": "#00ffd8",
-          "opacity": 0.3,
-          "width": 1
-        },
-        "move": {
-          "enable": true,
-          "speed": 2,
-          "direction": "none",
-          "random": false,
-          "straight": false,
-          "out_mode": "out"
-        }
+        "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#00ff00" },
+        "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000" } },
+        "opacity": { "value": 0.6, "random": true },
+        "size": { "value": 3, "random": true },
+        "line_linked": { "enable": true, "distance": 120, "color": "#00ff00", "opacity": 0.3, "width": 1 },
+        "move": { "enable": true, "speed": 2, "direction": "none", "out_mode": "out" }
       },
       "interactivity": {
         "detect_on": "canvas",
-        "events": {
-          "onhover": { "enable": true, "mode": "grab" },
-          "onclick": { "enable": true, "mode": "push" }
-        },
-        "modes": {
-          "grab": { "distance": 140, "line_linked": { "opacity": 0.5 } },
-          "push": { "particles_nb": 4 }
-        }
+        "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" } },
+        "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 0.5 } }, "push": { "particles_nb": 4 } }
       },
       "retina_detect": true
     });
   </script>
-
 </body>
-</html> 
+</html>
