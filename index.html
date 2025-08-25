@@ -161,10 +161,22 @@
       text-align: center;
       font-weight: bold;
     }
+     .section {
+  position: relative;
+  z-index: 2; /* ensures buttons and text are above particles */
+}
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* particles stay behind */
+}
   </style>
 </head>
 <body>
-
+ 
  <!-- SECTION 1: Hero with particles -->
 <div class="section" style="background-image: url('chc-banner.jpeg.jpg');">
   <div id="particles-js"></div>
