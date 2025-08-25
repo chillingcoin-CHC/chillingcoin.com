@@ -25,7 +25,7 @@
       justify-content: center;
       align-items: center;
       color: #fff;
-      z-index: 2; /* ✅ ensures above particles */
+      z-index: 2;
     }
 
     #particles-js {
@@ -35,7 +35,7 @@
       width: 100%;
       height: 100%;
       z-index: 0;
-      pointer-events: none; /* ✅ ignores clicks so buttons work */
+      pointer-events: none;
     }
 
     .welcome-blink {
@@ -50,22 +50,38 @@
       25%, 75% { opacity: 0; }
     }
 
-    .buttons a {
+    /* ✅ Green Button Style */
+    .buttons a,
+    .listings a,
+    .community a,
+    .audit-button {
       display: inline-block;
       margin: 10px;
       padding: 12px 25px;
       background: #00ff00;
-      color: #000;
+      color: #000 !important;
       text-decoration: none;
       font-weight: bold;
       border-radius: 5px;
-      transition: transform 0.2s;
-      z-index: 5;
+      transition: transform 0.2s, background 0.3s;
       position: relative;
     }
 
-    .buttons a:hover {
+    .buttons a:hover,
+    .listings a:hover,
+    .community a:hover,
+    .audit-button:hover {
       transform: scale(1.1);
+      background: #00cc00;
+    }
+
+    /* ✅ Footer black bar */
+    footer {
+      background: #000;
+      color: #00ff00;
+      font-weight: bold;
+      padding: 15px;
+      text-align: center;
     }
   </style>
 </head>
@@ -106,21 +122,18 @@
       "interactivity": {
         "events": {
           "onhover": { "enable": true, "mode": "grab" },
-          "onclick": { "enable": false }  /* ✅ no more particle popping */
+          "onclick": { "enable": false }  /* no more particle popping */
         }
       }
     });
   </script>
 
-</body>
-</html>
-  
   <!-- SECTION 2: Get Started CHC BSC -->
   <div class="section" style="background-image: url('chc-banner2.jpeg.jpg');">
     <h2>GET STARTED CHC BSC</h2>
     <div class="buttons">
-      <a href="https://swap.transit.finance/?locale=en%25252525252526theme%252525252526inputChain%2525252526inputChain&inputChain=BSC&inputSymbol=BNB&outputChain=BSC&outputCurrency=0xC50E66BcA472dA61D0184121e491609B774e2C37&outputSymbol=CHC#/" target="_blank">Buy via Transit Swap</a>
-      <a href="https://pancakeswap.finance/swap?outputCurrency=0xC50E66BcA472dA61D0184121e491609B774e2C37" target="_blank">Buy on PancakeSwap</a>
+      <a href="https://swap.transit.finance/?locale=en...">Buy via Transit Swap</a>
+      <a href="https://pancakeswap.finance/swap?outputCurrency=0xC50E66BcA472dA61D0184121e491609B774e2C37">Buy on PancakeSwap</a>
       <a href="https://chilling-coin.gitbook.io/chc-whitepaper/">View Whitepaper</a>
       <a href="https://chillingcoin-chc.github.io/CHC-NFT-Mint/">Mint NFT</a>
       <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0xc50e66bca472da61d0184121e491609b774e2c37">Dextools</a>
@@ -130,93 +143,52 @@
     </div>
   </div>
 
-    <!-- SECTION 3: Token Evolution, Community, Audit -->
-<div class="section" style="background-image: url('logo.jpeg.png');">
+  <!-- SECTION 3: Token Evolution, Community, Audit -->
+  <div class="section" style="background-image: url('logo.jpeg.png');">
 
-  <!-- Title + Paragraph with black background -->
-  <div style="background-color: rgba(0, 0, 0, 0.6); padding: 10px 20px; border-radius: 10px;">
-    <h2 class="blinking-title" style="color: #00ff00; font-weight: bold; font-size: 2.5rem;">
-      TOKEN EVOLUTION: CHC SOL
-    </h2>
-    <p style="color: #00ff00; font-size: 16px; max-width: 600px; margin-top: 10px; font-weight: bold;">
-      CHC SOL represents the next step in our ecosystem, bridging BSC and Solana for a stronger community and growth.
-    </p>
-  </div>
+    <!-- Title -->
+    <div style="background-color: rgba(0, 0, 0, 0.6); padding: 10px 20px; border-radius: 10px;">
+      <h2 style="color: #00ff00; font-weight: bold; font-size: 2.5rem;">TOKEN EVOLUTION: CHC SOL</h2>
+      <p style="color: #00ff00; font-size: 16px; max-width: 600px; margin-top: 10px; font-weight: bold;">
+        CHC SOL represents the next step in our ecosystem, bridging BSC and Solana for a stronger community and growth.
+      </p>
+    </div>
 
-  <!-- Official CHC SOL Page (CoinFactory) -->
-<section id="chc-sol-coin-factory" style="position: relative; padding: 40px 20px; text-align: center; display: flex; justify-content: center;">
-  
-  <!-- Wrapper to limit width -->
-  <div style="position: relative; z-index: 2; max-width: 600px; width: 100%; background-color: rgba(0, 0, 0, 0.6); padding: 30px 20px; border-radius: 12px;">
-    
-    <!-- Link -->
-    <a href="https://coinfactory.app/tokens/solana/DSfoxByj7HfTdSDVnRm8zvvWbhpjCB61vxaQMkNsE3Pf" 
-       target="_blank" 
-       style="color: #00ff00; font-weight: bold; font-size: 1.5rem; text-decoration: underline;">
-      Official CHC SOL Page (CoinFactory)
-    </a>
-  </div>
-</section>
+    <!-- Listings -->
+    <div class="listings" style="margin-top: 30px;">
+      <a href="https://fomospider.com/coin/Chilling-coin">FomoSpider</a>
+      <a href="https://coinmun.com/coins/chillingcoin">CoinMun</a>
+      <a href="https://coingem.com/solana/DSfoxByj7HfTdSDVnRm8zvvWbhpjCB61vxaQMkNsE3Pf">CoinGem</a>
+      <a href="https://coindizzy.com/solana/DSfoxByj7HfTdSDVnRm8zvvWbhpjCB61vxaQMkNsE3Pf">CoinDizzy</a>
+      <a href="https://www.freshcoins.io/coins/chilling-coin">FreshCoins</a>
+    </div>
 
-  <!-- Listings Section -->
-  <div class="listings" style="margin-top: 30px;">
-    <a href="https://fomospider.com/coin/Chilling-coin" style="color: #00ff00; font-weight: bold;">FomoSpider</a>
-    <a href="https://coinmun.com/coins/chillingcoin" style="color: #00ff00; font-weight: bold;">CoinMun</a>
-    <a href="https://coingem.com/solana/DSfoxByj7HfTdSDVnRm8zvvWbhpjCB61vxaQMkNsE3Pf" style="color: #00ff00; font-weight: bold;">CoinGem</a>
-    <a href="https://coindizzy.com/solana/DSfoxByj7HfTdSDVnRm8zvvWbhpjCB61vxaQMkNsE3Pf" style="color: #00ff00; font-weight: bold;">CoinDizzy</a>
-    <a href="https://www.freshcoins.io/coins/chilling-coin" style="color: #00ff00; font-weight: bold;">FreshCoins</a>
-  </div>
+    <!-- Community -->
+    <div style="background-color: rgba(0, 0, 0, 0.6); padding: 20px; margin-top: 40px; border-radius: 10px;">
+      <h2 style="color: #00ff00; font-weight: bold;">JOIN OUR COMMUNITY</h2>
+      <div class="community" style="margin-top: 10px;">
+        <a href="https://t.me/Chillingcoinbsc0">Telegram</a>
+        <a href="https://x.com/chillingchc">Twitter / X</a>
+        <a href="https://discord.gg/yF9C36dV">Discord</a>
+      </div>
+    </div>
 
-  <!-- Community Section with black background -->
-  <div style="background-color: rgba(0, 0, 0, 0.6); padding: 20px; margin-top: 40px; border-radius: 10px;">
-    <h2 class="blinking-title" style="color: #00ff00; font-weight: bold;">JOIN OUR COMMUNITY</h2>
-    <div class="community" style="margin-top: 10px;">
-      <a href="https://t.me/Chillingcoinbsc0" style="color: #00ff00; font-weight: bold;">Telegram</a>
-      <a href="https://x.com/chillingchc" style="color: #00ff00; font-weight: bold;">Twitter / X</a>
-      <a href="https://discord.gg/yF9C36dV" style="color: #00ff00; font-weight: bold;">Discord</a>
+    <!-- Audit -->
+    <div class="audit-section" style="background-color: rgba(0,0,0,0.6); padding: 20px; margin-top: 40px; border-radius: 10px;">
+      <h2 style="color: #00ff00; font-weight: bold;">SMART CONTRACT AUDIT</h2>
+      <a class="audit-button" href="https://honeypot.is/?address=0xc50e66bca472da61d0184121e491609b774e2c37" target="_blank">
+        View CHC BSC Honeypot Audit Report
+      </a>
+      <a class="audit-button" href="https://www.freshcoins.io/token-scan/sol/DSfoxByj7HfTdSDVnRm8zvvWbhpjCB61vxaQMkNsE3Pf" target="_blank">
+        View CHC SOL Audit (FreshCoins)
+      </a>
     </div>
   </div>
 
-  <!-- Audit Section with black background -->
-  <div class="audit-section" style="background-color: rgba(0,0,0,0.6); padding: 20px; margin-top: 40px; border-radius: 10px;">
-    <h2 class="blinking-title" style="color: #00ff00; font-weight: bold;">SMART CONTRACT AUDIT</h2>
-
-    <!-- First Audit Link -->
-    <a class="audit-button" href="https://honeypot.is/?address=0xc50e66bca472da61d0184121e491609b774e2c37" target="_blank" style="margin-top: 10px;">
-      View CHC BSC Honeypot Audit Report
-    </a>
-
-    <!-- Second Audit Link (FreshCoins for SOL) -->
-    <a class="audit-button" href="https://www.freshcoins.io/token-scan/sol/DSfoxByj7HfTdSDVnRm8zvvWbhpjCB61vxaQMkNsE3Pf" target="_blank" style="margin-top: 10px;">
-      View CHC SOL Audit (FreshCoins)
-    </a>
-  </div>
-</div>
-  
+  <!-- Footer -->
   <footer>
     &copy; 2025 CHILLINGCOIN ($CHC). ALL RIGHTS RESERVED.
   </footer>
 
-  <!-- Particles.js CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS("particles-js", {
-      "particles": {
-        "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
-        "color": { "value": "#00ff00" },
-        "shape": { "type": "circle", "stroke": { "width": 0, "color": "#000" } },
-        "opacity": { "value": 0.6, "random": true },
-        "size": { "value": 3, "random": true },
-        "line_linked": { "enable": true, "distance": 120, "color": "#00ff00", "opacity": 0.3, "width": 1 },
-        "move": { "enable": true, "speed": 2, "direction": "none", "out_mode": "out" }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" } },
-        "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 0.5 } }, "push": { "particles_nb": 4 } }
-      },
-      "retina_detect": true
-    });
-  </script>
 </body>
 </html>
