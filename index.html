@@ -65,6 +65,7 @@
       border-radius: 5px;
       transition: transform 0.2s, background 0.3s;
       position: relative;
+      z-index: 5; /* ✅ keeps buttons above particles */
     }
 
     .buttons a:hover,
@@ -100,19 +101,16 @@
       Join the ChillingCoin ecosystem – a meme-powered, community-driven token with staking, NFTs, and fun utilities bridging BSC and Solana. Chill, earn, and grow with us! 💎✨
     </p>
 
-        <!-- FLOOZ BUTTON -->
+    <!-- FLOOZ + GECKOTERMINAL BUTTONS -->
     <div class="buttons" style="margin-top: 20px;">
       <a href="https://flooz.xyz/hub/-1002863173898?utm_source=telegram&utm_medium=buy-message-iris-individuals&utm_campaign=hub-page" target="_blank">
         Join our Flooz Hub
       </a>
-    </div>
-
-    <!-- GECKOTERMINAL BUTTON -->
-    <div class="buttons" style="margin-top: 10px;">
       <a href="https://www.geckoterminal.com/solana/pools/AoF2jhkomKuX6z9PktdEoZzyayodx3MnpA5ofQvWoDEo" target="_blank">
         📊 View CHC SOL Chart
       </a>
     </div>
+  </div>
 
   <!-- Particles.js library -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
