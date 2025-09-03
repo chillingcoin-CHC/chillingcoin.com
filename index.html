@@ -20,10 +20,10 @@
       min-height: 100vh;
       background-size: cover;
       background-position: center;
-      display: flex;
+      display: flex;                /* ✅ flexbox */
+      justify-content: center;      /* ✅ center horizontally */
+      align-items: center;          /* ✅ center vertically */
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
       color: #fff;
       z-index: 2;
       padding: 20px;
@@ -39,16 +39,15 @@
       pointer-events: none;
     }
 
-    /* ✅ Flex container for all dark background blocks */
     .center-box {
       background-color: rgba(0, 0, 0, 0.6);
       padding: 20px;
       border-radius: 10px;
       max-width: 700px;
+      width: 90%;                   /* ✅ responsive on mobile */
       text-align: center;
       z-index: 2;
       position: relative;
-      margin: 20px auto;
     }
 
     .welcome-blink {
@@ -58,6 +57,7 @@
       animation: blink 1.5s infinite;
       margin-bottom: 20px;
       text-align: center;
+      z-index: 2;
     }
 
     @keyframes blink {
@@ -73,7 +73,6 @@
       margin: 0;
     }
 
-    /* ✅ Green Button Style */
     .buttons a,
     .listings a,
     .community a,
@@ -101,7 +100,6 @@
       background: #00cc00;
     }
 
-    /* ✅ Footer black bar */
     footer {
       background: #000;
       color: #00ff00;
@@ -113,14 +111,10 @@
 </head>
 <body>
 
-  <!-- SECTION 1: Hero with particles -->
+  <!-- SECTION 1 -->
   <div class="section" style="background-image: url('chc-banner.jpeg.jpg');">
     <div id="particles-js"></div>
-
-    <!-- Blinking Welcome -->
     <div class="welcome-blink">WELCOME TO $CHC</div>
-
-    <!-- ✅ Centered dark background block -->
     <div class="center-box">
       <p>
         🔥 <strong>CHC SOL Live</strong> | 🚀 <strong>CHC BSC Live</strong><br>
@@ -129,7 +123,7 @@
     </div>
   </div>
 
-  <!-- Particles.js library -->
+  <!-- particles.js -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
     particlesJS("particles-js", {
@@ -142,64 +136,55 @@
       },
       "interactivity": {
         "events": {
-          "onhover": { "enable": true, "mode": "grab" },
-          "onclick": { "enable": false }
+          "onhover": { "enable": true, "mode": "grab" }
         }
       }
     });
   </script>
 
-  <!-- SECTION 2: Get Started CHC BSC -->
+  <!-- SECTION 2 -->
   <div class="section" style="background-image: url('chc-banner2.jpeg.jpg');">
     <div class="center-box">
       <h2 style="color: #00ff00; font-weight: bold;">GET STARTED CHC BSC</h2>
       <div class="buttons">
-        <a href="https://swap.transit.finance/?locale=en...">Buy via Transit Swap</a>
-        <a href="https://pancakeswap.finance/swap?outputCurrency=0xC50E66BcA472dA61D0184121e491609B774e2C37">Buy on PancakeSwap</a>
-        <a href="https://chilling-coin.gitbook.io/chc-whitepaper/">View Whitepaper</a>
-        <a href="https://chillingcoin-chc.github.io/CHC-NFT-Mint/">Mint NFT</a>
-        <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0xc50e66bca472da61d0184121e491609b774e2c37">Dextools</a>
-        <a href="https://www.geckoterminal.com/bsc/pools/0xc50e66bca472da61d0184121e491609b774e2c37">GeckoTerminal</a>
-        <a href="https://coinpaprika.com/coin/chc-chillingcoin/">CoinPaprika</a>
-        <a href="https://chc-staking-dapp.vercel.app">Stake CHC</a>
+        <a href="#">Buy via Transit Swap</a>
+        <a href="#">Buy on PancakeSwap</a>
+        <a href="#">View Whitepaper</a>
+        <a href="#">Mint NFT</a>
+        <a href="#">Dextools</a>
+        <a href="#">GeckoTerminal</a>
+        <a href="#">CoinPaprika</a>
+        <a href="#">Stake CHC</a>
       </div>
     </div>
   </div>
 
-  <!-- SECTION 3: Token Evolution, Community, Audit -->
+  <!-- SECTION 3 -->
   <div class="section" style="background-image: url('logo.jpeg.png');">
-
-    <!-- Title -->
     <div class="center-box">
       <h2 style="color: #00ff00; font-weight: bold; font-size: 2.5rem;">TOKEN EVOLUTION: CHC SOL</h2>
       <p style="color: #00ff00; font-size: 16px; font-weight: bold;">
         CHC SOL represents the next step in our ecosystem, bridging BSC and Solana for a stronger community and growth.
       </p>
-      <a class="pumpfun-link" href="https://pump.fun/3Tq6kazN1DwHVyzytB5a1tN4VfVqdsq7ge27oYtypump" target="_blank">
-        Buy CHC SOL on Pump.fun
-      </a>
+      <a class="pumpfun-link" href="https://pump.fun/3Tq6kazN1DwHVyzytB5a1tN4VfVqdsq7ge27oYtypump" target="_blank">Buy CHC SOL on Pump.fun</a>
     </div>
 
-    <!-- Community -->
     <div class="center-box">
       <h2 style="color: #00ff00; font-weight: bold;">JOIN OUR COMMUNITY</h2>
-      <div class="community" style="margin-top: 10px;">
-        <a href="https://t.me/Chillingcoinbsc0">Telegram</a>
-        <a href="https://x.com/chillingchc">Twitter / X</a>
-        <a href="https://discord.gg/yF9C36dV">Discord</a>
+      <div class="community">
+        <a href="#">Telegram</a>
+        <a href="#">Twitter / X</a>
+        <a href="#">Discord</a>
       </div>
     </div>
 
-    <!-- Audit -->
     <div class="center-box">
       <h2 style="color: #00ff00; font-weight: bold;">SMART CONTRACT AUDIT</h2>
-      <a class="audit-button" href="https://honeypot.is/?address=0xc50e66bca472da61d0184121e491609b774e2c37" target="_blank">
-        View CHC BSC Honeypot Audit Report
-      </a>
+      <a class="audit-button" href="#" target="_blank">View CHC BSC Honeypot Audit Report</a>
     </div>
   </div>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     &copy; 2025 CHILLINGCOIN ($CHC). ALL RIGHTS RESERVED.
   </footer>
