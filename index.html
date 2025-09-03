@@ -26,6 +26,7 @@
       align-items: center;
       color: #fff;
       z-index: 2;
+      padding: 20px;
     }
 
     #particles-js {
@@ -43,11 +44,32 @@
       font-weight: bold;
       color: #00ff00;
       animation: blink 1.5s infinite;
+      margin-bottom: 2rem;
+      z-index: 2;
+      position: relative;
     }
 
     @keyframes blink {
       0%, 50%, 100% { opacity: 1; }
       25%, 75% { opacity: 0; }
+    }
+
+    /* ✅ Dark background block for intro */
+    .intro-box {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 700px;
+      z-index: 2;
+      position: relative;
+    }
+
+    .intro-box p {
+      font-size: 1.2rem;
+      color: #00ff00;
+      font-weight: bold;
+      line-height: 1.5;
+      margin: 0;
     }
 
     /* ✅ Green Button Style */
@@ -66,6 +88,7 @@
       border-radius: 5px;
       transition: transform 0.2s, background 0.3s;
       position: relative;
+      z-index: 2;
     }
 
     .buttons a:hover,
@@ -96,11 +119,13 @@
     <!-- Blinking Welcome -->
     <div class="welcome-blink">WELCOME TO $CHC</div>
 
-    <!-- Intro Message -->
-    <p style="margin-top: 4rem; font-size: 1.2rem; color: #00ff00; font-weight: bold; line-height: 1.5;">
-      🔥 <strong>CHC SOL Live</strong> | 🚀 <strong>CHC BSC Live</strong><br>
-      Join the ChillingCoin ecosystem – a meme-powered, community-driven token with staking, NFTs, and fun utilities bridging BSC and Solana. Chill, earn, and grow with us! 💎✨
-    </p>
+    <!-- ✅ Dark background intro -->
+    <div class="intro-box">
+      <p>
+        🔥 <strong>CHC SOL Live</strong> | 🚀 <strong>CHC BSC Live</strong><br>
+        Join the ChillingCoin ecosystem – a meme-powered, community-driven token with staking, NFTs, and fun utilities bridging BSC and Solana. Chill, earn, and grow with us! 💎✨
+      </p>
+    </div>
   </div>
 
   <!-- Particles.js library -->
@@ -152,8 +177,6 @@
         Buy CHC SOL on Pump.fun
       </a>
     </div>
-
-    
 
     <!-- Community -->
     <div style="background-color: rgba(0, 0, 0, 0.6); padding: 20px; margin-top: 40px; border-radius: 10px;">
