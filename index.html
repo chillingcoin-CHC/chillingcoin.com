@@ -39,14 +39,25 @@
       pointer-events: none;
     }
 
+    /* ✅ Flex container for all dark background blocks */
+    .center-box {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 700px;
+      text-align: center;
+      z-index: 2;
+      position: relative;
+      margin: 20px auto;
+    }
+
     .welcome-blink {
       font-size: 2rem;
       font-weight: bold;
       color: #00ff00;
       animation: blink 1.5s infinite;
-      margin-bottom: 2rem;
-      z-index: 2;
-      position: relative;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
     @keyframes blink {
@@ -54,17 +65,7 @@
       25%, 75% { opacity: 0; }
     }
 
-    /* ✅ Dark background block for intro */
-    .intro-box {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 700px;
-      z-index: 2;
-      position: relative;
-    }
-
-    .intro-box p {
+    .center-box p {
       font-size: 1.2rem;
       color: #00ff00;
       font-weight: bold;
@@ -119,8 +120,8 @@
     <!-- Blinking Welcome -->
     <div class="welcome-blink">WELCOME TO $CHC</div>
 
-    <!-- ✅ Dark background intro -->
-    <div class="intro-box">
+    <!-- ✅ Centered dark background block -->
+    <div class="center-box">
       <p>
         🔥 <strong>CHC SOL Live</strong> | 🚀 <strong>CHC BSC Live</strong><br>
         Join the ChillingCoin ecosystem – a meme-powered, community-driven token with staking, NFTs, and fun utilities bridging BSC and Solana. Chill, earn, and grow with us! 💎✨
@@ -150,16 +151,18 @@
 
   <!-- SECTION 2: Get Started CHC BSC -->
   <div class="section" style="background-image: url('chc-banner2.jpeg.jpg');">
-    <h2>GET STARTED CHC BSC</h2>
-    <div class="buttons">
-      <a href="https://swap.transit.finance/?locale=en...">Buy via Transit Swap</a>
-      <a href="https://pancakeswap.finance/swap?outputCurrency=0xC50E66BcA472dA61D0184121e491609B774e2C37">Buy on PancakeSwap</a>
-      <a href="https://chilling-coin.gitbook.io/chc-whitepaper/">View Whitepaper</a>
-      <a href="https://chillingcoin-chc.github.io/CHC-NFT-Mint/">Mint NFT</a>
-      <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0xc50e66bca472da61d0184121e491609b774e2c37">Dextools</a>
-      <a href="https://www.geckoterminal.com/bsc/pools/0xc50e66bca472da61d0184121e491609b774e2c37">GeckoTerminal</a>
-      <a href="https://coinpaprika.com/coin/chc-chillingcoin/">CoinPaprika</a>
-      <a href="https://chc-staking-dapp.vercel.app">Stake CHC</a>
+    <div class="center-box">
+      <h2 style="color: #00ff00; font-weight: bold;">GET STARTED CHC BSC</h2>
+      <div class="buttons">
+        <a href="https://swap.transit.finance/?locale=en...">Buy via Transit Swap</a>
+        <a href="https://pancakeswap.finance/swap?outputCurrency=0xC50E66BcA472dA61D0184121e491609B774e2C37">Buy on PancakeSwap</a>
+        <a href="https://chilling-coin.gitbook.io/chc-whitepaper/">View Whitepaper</a>
+        <a href="https://chillingcoin-chc.github.io/CHC-NFT-Mint/">Mint NFT</a>
+        <a href="https://www.dextools.io/app/en/bnb/pair-explorer/0xc50e66bca472da61d0184121e491609b774e2c37">Dextools</a>
+        <a href="https://www.geckoterminal.com/bsc/pools/0xc50e66bca472da61d0184121e491609b774e2c37">GeckoTerminal</a>
+        <a href="https://coinpaprika.com/coin/chc-chillingcoin/">CoinPaprika</a>
+        <a href="https://chc-staking-dapp.vercel.app">Stake CHC</a>
+      </div>
     </div>
   </div>
 
@@ -167,19 +170,18 @@
   <div class="section" style="background-image: url('logo.jpeg.png');">
 
     <!-- Title -->
-    <div style="background-color: rgba(0, 0, 0, 0.6); padding: 10px 20px; border-radius: 10px;">
+    <div class="center-box">
       <h2 style="color: #00ff00; font-weight: bold; font-size: 2.5rem;">TOKEN EVOLUTION: CHC SOL</h2>
-      <p style="color: #00ff00; font-size: 16px; max-width: 600px; margin-top: 10px; font-weight: bold;">
+      <p style="color: #00ff00; font-size: 16px; font-weight: bold;">
         CHC SOL represents the next step in our ecosystem, bridging BSC and Solana for a stronger community and growth.
       </p>
-      <!-- ✅ Pump.fun link added here -->
       <a class="pumpfun-link" href="https://pump.fun/3Tq6kazN1DwHVyzytB5a1tN4VfVqdsq7ge27oYtypump" target="_blank">
         Buy CHC SOL on Pump.fun
       </a>
     </div>
 
     <!-- Community -->
-    <div style="background-color: rgba(0, 0, 0, 0.6); padding: 20px; margin-top: 40px; border-radius: 10px;">
+    <div class="center-box">
       <h2 style="color: #00ff00; font-weight: bold;">JOIN OUR COMMUNITY</h2>
       <div class="community" style="margin-top: 10px;">
         <a href="https://t.me/Chillingcoinbsc0">Telegram</a>
@@ -189,7 +191,7 @@
     </div>
 
     <!-- Audit -->
-    <div class="audit-section" style="background-color: rgba(0,0,0,0.6); padding: 20px; margin-top: 40px; border-radius: 10px;">
+    <div class="center-box">
       <h2 style="color: #00ff00; font-weight: bold;">SMART CONTRACT AUDIT</h2>
       <a class="audit-button" href="https://honeypot.is/?address=0xc50e66bca472da61d0184121e491609b774e2c37" target="_blank">
         View CHC BSC Honeypot Audit Report
