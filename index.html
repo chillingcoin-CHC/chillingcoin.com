@@ -12,6 +12,7 @@
       font-family: Arial, sans-serif;
       overflow-x: hidden;
       text-align: center;
+      background: #000;
     }
 
     .section {
@@ -25,6 +26,7 @@
       align-items: center;
       flex-direction: column;
       color: #fff;
+      z-index: 2;
       padding: 20px;
     }
 
@@ -39,19 +41,15 @@
     }
 
     .center-box {
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 25px;
       border-radius: 10px;
-      max-width: 850px;
+      max-width: 1000px;
       width: 95%;
       text-align: center;
-      z-index: 2;
-      position: relative;
       margin: 20px auto;
-      overflow-wrap: break-word;
-      word-wrap: break-word;
-      word-break: break-word;
       box-sizing: border-box;
+      word-wrap: break-word;
     }
 
     .welcome-blink {
@@ -60,7 +58,6 @@
       color: #00ff00;
       animation: blink 1.5s infinite;
       margin-bottom: 20px;
-      z-index: 2;
     }
 
     @keyframes blink {
@@ -68,15 +65,21 @@
       25%, 75% { opacity: 0; }
     }
 
-    .center-box p {
-      font-size: 1.2rem;
-      color: #00ff00;
+    .center-box h2 {
+      font-size: 2rem;
       font-weight: bold;
-      line-height: 1.5;
-      margin: 0 0 20px 0;
+      color: #00ff00;
+      margin-bottom: 15px;
     }
 
-    /* Button groups */
+    .center-box p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #00ff00;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
     .buttons,
     .listings,
     .community {
@@ -84,18 +87,16 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 12px;
-      margin-top: 15px;
       width: 100%;
     }
 
-    /* Button style */
     .buttons a,
     .listings a,
     .community a,
     .audit-button,
     .pumpfun-link {
-      flex: 1 1 200px;
-      max-width: 220px;
+      flex: 1 1 220px;
+      max-width: 240px;
       min-width: 180px;
       height: 55px;
       display: flex;
@@ -109,7 +110,6 @@
       font-weight: bold;
       border-radius: 5px;
       transition: transform 0.2s, background 0.3s;
-      box-sizing: border-box;
     }
 
     .buttons a:hover,
@@ -161,60 +161,57 @@
     });
   </script>
 
-  <!-- SECTION 2 (Get Started - BSC) -->
+  <!-- SECTION 2 -->
   <div class="section" style="background-image: url('chc-banner2.jpeg.jpg');">
     <div class="center-box">
-      <h2 style="color: #00ff00; font-weight: bold;">GET STARTED CHC BSC</h2>
+      <h2>GET STARTED CHC BSC</h2>
       <div class="buttons">
-        <a href="https://swap.transit.finance/?locale=en...&inputChain=BSC&inputSymbol=CHC&outputChain=ETH&outputCurrency=0xdac17f958d2ee523a2206206994597c13d831ec7&outputSymbol=USDT&inputCurrency=0xC50E66BcA472dA61D0184121e491609B774e2C37#/" target="_blank" rel="noopener">Buy via Transit Swap</a>
-        <a href="https://pancakeswap.finance/swap?outputCurrency=0xc50E66BCa472dA61D0184121e491609B774e2c37" target="_blank" rel="noopener">Buy on PancakeSwap</a>
-        <a href="https://chillingcoin.gitbook.io/tokenomics/" target="_blank" rel="noopener">View Whitepaper</a>
-        <a href="https://chillingcoin-chc.github.io/CHC-NFT-Mint/" target="_blank" rel="noopener">Mint NFT</a>
-        <a href="https://apespace.io/bsc/0xc50e66bca472da61d0184121e491609b774e2c37" target="_blank" rel="noopener">ApeSpace</a>
-        <a href="https://www.geckoterminal.com/bsc/tokens/0xc50E66BCa472dA61D0184121e491609B774e2c37" target="_blank" rel="noopener">GeckoTerminal</a>
-        <a href="https://coinpaprika.com/coin/chc-chillingcoin/" target="_blank" rel="noopener">CoinPaprika</a>
-        <a href="https://chc-staking-dapp.vercel.app" target="_blank" rel="noopener">Stake CHC</a>
+        <a href="https://swap.transit.finance/?locale=en...&inputChain=BSC&inputSymbol=CHC&outputChain=ETH&outputCurrency=0xdac17f958d2ee523a2206206994597c13d831ec7&outputSymbol=USDT&inputCurrency=0xC50E66BcA472dA61D0184121e491609B774e2C37#/" target="_blank">Buy via Transit Swap</a>
+        <a href="https://pancakeswap.finance/swap" target="_blank">Buy on PancakeSwap</a>
+        <a href="https://chillingcoin.gitbook.io/tokenomics/" target="_blank">View Whitepaper</a>
+        <a href="https://chillingcoin-chc.github.io/CHC-NFT-Mint/" target="_blank">Mint NFT</a>
+        <a href="https://apespace.io/bsc/0xc50e66bca472da61d0184121e491609b774e2c37" target="_blank">ApeSpace</a>
+        <a href="https://www.geckoterminal.com/bsc/pools/0xc50e66bca472da61d0184121e491609b774e2c37" target="_blank">GeckoTerminal</a>
+        <a href="https://coinpaprika.com/coin/chc-chillingcoin/" target="_blank">CoinPaprika</a>
+        <a href="https://chc-staking-dapp.vercel.app" target="_blank">Stake CHC</a>
       </div>
     </div>
   </div>
 
-  <!-- SECTION 3 (CHC SOL Evolution + Pump.fun + Listings) -->
+  <!-- SECTION 3 -->
   <div class="section" style="background-image: url('logo.jpeg.png');">
     <div class="center-box">
-      <h2 style="color: #00ff00; font-weight: bold; font-size: 2.5rem;">TOKEN EVOLUTION: CHC SOL</h2>
-      <p style="color: #00ff00; font-size: 16px; font-weight: bold;">
+      <h2>TOKEN EVOLUTION: CHC SOL</h2>
+      <p>
         CHC SOL represents the next step in our ecosystem, bridging BSC and Solana for a stronger community and growth.
       </p>
-      <a class="pumpfun-link" href="https://pump.fun/3Tq6kazN1DwHVyzytB5a1tN4VfVqdsq7ge27oYtypump" target="_blank" rel="noopener">Buy CHC SOL on Pump.fun</a>
+      <a class="pumpfun-link" href="https://pump.fun/3Tq6kazN1DwHVyzytB5a1tN4VfVqdsq7ge27oYtypump" target="_blank">Buy CHC SOL on Pump.fun</a>
     </div>
 
-    <!-- LISTINGS -->
     <div class="center-box">
-      <h2 style="color: #00ff00; font-weight: bold;">CHC SOL LISTINGS</h2>
+      <h2>CHC SOL LISTINGS</h2>
       <div class="listings">
-        <a href="https://coingem.com/solana/3Tq6kazN1DwHVyzytB5a1tN4VfVqdsq7ge27oYtypump" target="_blank" rel="noopener">CoinGem</a>
-        <a href="https://coindizzy.com/solana/3Tq6kazN1DwHVyzytB5a1tN4VfVqdsq7ge27oYtypump" target="_blank" rel="noopener">CoinDizzy</a>
-        <a href="https://top100token.com/solana/3Tq6kazN1DwHVyzytB5a1tN4VfVqdsq7ge27oYtypump" target="_blank" rel="noopener">Top100Token</a>
-        <a href="https://www.freshcoins.io/coins/chilling-coin-68c96d98" target="_blank" rel="noopener">FreshCoins</a>
-        <a href="https://coinhunt.cc/coin/68b8940042e7258fbe298070" target="_blank" rel="noopener">CoinHunt</a>
-        <a href="https://coinmun.com/coins/chillingcoin-1" target="_blank" rel="noopener">CoinMun</a>
+        <a href="https://coingem.com/solana/3Tq6kazN1DwHVyzytB5a1tN4VfVqdsq7ge27oYtypump" target="_blank">CoinGem</a>
+        <a href="https://coindizzy.com/solana/3Tq6kazN1DwHVyzytB5a1tN4VfVqdsq7ge27oYtypump" target="_blank">CoinDizzy</a>
+        <a href="https://top100token.com/solana/3Tq6kazN1DwHVyzytB5a1tN4VfVqdsq7ge27oYtypump" target="_blank">Top100Token</a>
+        <a href="https://www.freshcoins.io/coins/chilling-coin-68c96d98" target="_blank">FreshCoins</a>
+        <a href="https://coinhunt.cc/coin/68b8940042e7258fbe298070" target="_blank">CoinHunt</a>
+        <a href="https://coinmun.com/coins/chillingcoin-1" target="_blank">CoinMun</a>
       </div>
     </div>
 
-    <!-- COMMUNITY -->
     <div class="center-box">
-      <h2 style="color: #00ff00; font-weight: bold;">JOIN OUR COMMUNITY</h2>
+      <h2>JOIN OUR COMMUNITY</h2>
       <div class="community">
-        <a href="https://t.me/Chillingcoinbsc0" target="_blank" rel="noopener">Telegram</a>
-        <a href="https://x.com/chillingchc" target="_blank" rel="noopener">Twitter / X</a>
-        <a href="https://discord.gg/FpzFqFUQ" target="_blank" rel="noopener">Discord</a>
+        <a href="https://t.me/Chillingcoinbsc0" target="_blank">Telegram</a>
+        <a href="https://x.com/chillingchc" target="_blank">Twitter / X</a>
+        <a href="https://discord.gg/FpzFqFUQ" target="_blank">Discord</a>
       </div>
     </div>
 
-    <!-- AUDIT -->
     <div class="center-box">
-      <h2 style="color: #00ff00; font-weight: bold;">SMART CONTRACT AUDIT</h2>
-      <a class="audit-button" href="https://honeypot.is/?address=0xc50e66bca472da61d0184121e491609b774e2c37" target="_blank" rel="noopener">View CHC BSC Honeypot Audit Report</a>
+      <h2>SMART CONTRACT AUDIT</h2>
+      <a class="audit-button" href="https://honeypot.is/?address=0xc50e66bca472da61d0184121e491609b774e2c37" target="_blank">View CHC BSC Honeypot Audit Report</a>
     </div>
   </div>
 
